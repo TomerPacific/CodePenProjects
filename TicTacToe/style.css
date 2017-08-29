@@ -1,0 +1,34 @@
+*{
+  text-align:center;
+}
+
+ul{
+  list-style:none;
+  padding:0px;
+}
+
+ul li{
+  display:inline;
+  padding:0px;
+}
+
+#gameBackground{
+  width: 24%;
+  border: 1px solid black;
+  margin: auto auto;
+}
+
+svg{
+  padding-top: 5%;
+}
+
+.boardMember {
+    width: 200px;
+    height: 200px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}

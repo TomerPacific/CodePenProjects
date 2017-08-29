@@ -1,0 +1,39 @@
+body{
+  background:url(https://images.freecreatives.com/wp-content/uploads/2016/02/Wood-Floor-Background.jpg);
+}
+#simonText{
+  font-weight:bold;
+  font-size: 2.5em;
+}
+.btnText{
+  font-weight:bold;
+  font-size: 1em;
+}
+#start{
+  width: 25px;
+  height: 25px;
+  border: 3px solid black;
+  border-radius: 25px;
+  background-color:#33ff33;
+}
+
+#strict{
+  width: 25px;
+  height: 25px;
+  border: 3px solid black;
+  border-radius: 25px;
+  background-color:red;
+}
+#onBtn{
+  width: 25px;
+  height: 20px;
+  background-color: #6699ff;
+  position: fixed;
+  border: 1px solid black;
+}
+
+
+#simonSvg{
+  margin:auto auto;
+  display: block;
+}

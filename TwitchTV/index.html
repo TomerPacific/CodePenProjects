@@ -1,0 +1,44 @@
+<html>
+  
+  <head>
+    
+    <title>TwitchTV Streamers</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://use.fontawesome.com/458005145e.js"></script>
+    <script src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  
+  
+  <body>
+    
+    <div class="jumbotron">
+       <h2><i class="fa fa-twitch" aria-hidden="true"></i>Twitch Streamers<i class="fa fa-twitch" aria-hidden="true"></i></h2>
+      <ul class="streamBtns">
+        <li><button type="button" class="btn btn-primary" onclick="fetchAllStreamers()">All</button></li>
+        <li><button type="button" class="btn btn-success" onclick="fetchOnlineStreamers()">Online</button></li>
+        <li><button type="button" class="btn btn-danger" onclick=" fetchOfflineStreamers()">Offline</button></li>
+      </ul>
+      
+    </div> <!-- emd of jumbotron -->
+
+    <div id="results">
+
+    <ul id="resultsList">
+
+
+    </ul>
+
+    </div>
+    
+  <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </body>
+  
+  
+  
+</html>

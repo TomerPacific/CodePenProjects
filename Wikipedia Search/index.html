@@ -1,0 +1,52 @@
+<html>
+  
+  <head>
+    
+    <title>Wikipedia</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://use.fontawesome.com/458005145e.js"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+     <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  </head>
+  
+  
+  <body>
+    
+    <div id="randomLink" class="jumbotron">
+      <p>Feeling Lucky?</p>
+      <p>Click For A Random <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><i class="fa fa-wikipedia-w" id="wiki" aria-hidden="true"></i></a>&nbsp;Article</p>
+    </div>
+      
+    
+    <div id="searchArticle">
+
+     <form><input placeholder="" type="text" value="" name="search" id="searchField">
+      <input type="button" value="Submit" onclick="showSearchResults()"/></form>
+  <!--    <form>
+        <a href="#" onclick="showSearch()"><span id="maginfiyingGlass"><i class="fa fa-search" aria-hidden="true"></i></span></a>
+        <input class="sb-search-input" placeholder="Search... For Your Knowledge" type="text" value="" name="search" id="search">
+        
+      </form> -->
+    </div>
+
+    <div id="results">
+
+    <ul id="resultList">
+
+
+    </ul>
+
+
+    </div>
+
+   
+  </body>
+  
+  
+  
+</html>

@@ -1,0 +1,64 @@
+body{
+  background: #0066ff !important;
+  font-size: 1.5em;
+  text-align:center;
+}
+
+#randomLink a{
+  text-decoration:none;
+  color:#666699;
+}
+
+#randomLink p{
+    font-size: 2em;
+}
+#randomLink{
+  font-family: 'Lobster', cursive;
+  width: 50%;
+  text-align: center;
+  margin: auto auto;
+  margin-top: 10%;
+  border: 2px dashed white;
+  border-style: groove;
+ /* outline: 2px dashed red; */
+  border-radius: 2px;
+  background-color: purple !important;
+  color: white;
+
+}
+
+#wiki:hover{
+  color:white;
+}
+
+#searchArticle{
+  padding-top: 3%;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+}
+
+#searchArticle p{
+  font-size: 2em;
+  display:inline;
+}
+
+
+#search{
+  border:black;
+  border-radius: 10%;
+  opacity:0;
+}
+
+form{
+  display: inline-block;
+  margin-bottom: 2%;
+}
+
+#resultList{
+  list-style: none;
+}
+
+.snippets{
+  font-size: 1em;
+  color: white;
+}

@@ -1,0 +1,21 @@
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Weather APP</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="app.js"></script>
+	</head>
+<body>
+	<div id="forecast">
+		<h1>Weather at <span id="location"> </span></h1>
+		<div id="imgdiv">
+		<img id="weatherIcon" src=""/>
+	</div>
+	<p>It is currently <span id="temp"> </span> with <span id="desc"> </span></p>
+	<p>Wind: <span id="wind"></span></p>
+	<p id="description"></p>
+	</div>
+	<button class="btn btn-info" onclick="convertDegrees()">Convert Degrees</button>
+</body>
+</html>

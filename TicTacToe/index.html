@@ -1,0 +1,68 @@
+<html>
+
+
+<head>
+
+<title>TicTacToe</title>
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://use.fontawesome.com/458005145e.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+     <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script src="app.js"></script>
+</head>
+  
+<body>
+
+<svg id="mySVG" width="600" height="700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="0" y="20" width="600" height="600" style="fill:rgb(192,192,192);stroke-width:1;stroke:rgb(0,0,0)" />
+  <line x1="200" y1="20" x2="200" y2="620" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <line x1="400" y1="20" x2="400" y2="620" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <line x1="0" y1="220" x2="600" y2="220" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <line x1="0" y1="420" x2="600" y2="420" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <text x="200" y="0" fill="black">Player : </text>
+  <foreignObject x="200" y="0" width="10" height="5">
+      <p id="playerScore"></p>
+  </foreignObject>
+  
+  <text x="350" y="0" fill="black">Computer : </text>
+  <foreignObject x="350" y="0" width="10" height="5">
+      <p id="computerScore"></p>
+  </foreignObject>
+  <!-- top row of buttons -->
+  <foreignObject id="topLeft" x="0" y="20" width="200" height="200">
+      <button class="boardMember" onclick="handleMove(this, '00')"></button>
+  </foreignObject>
+  <foreignObject id="middleTop" x="200" y="20" width="200" height="200">
+     <button class="boardMember" onclick="handleMove(this, '01')"></button>
+  </foreignObject>
+  <foreignObject id="rightTop" x="400" y="20" width="200" height="200">
+       <button class="boardMember" onclick="handleMove(this, '02')"></button>
+  </foreignObject>
+  <!-- middle row of buttons -->
+  <foreignObject x="0" y="220" width="200" height="200">
+      <button class="boardMember" onclick="handleMove(this, '10')"></button>
+  </foreignObject>
+  <foreignObject x="200" y="220" width="200" height="200">
+     <button class="boardMember" onclick="handleMove(this, '11')"></button>
+  </foreignObject>
+  <foreignObject x="400" y="220" width="200" height="200">
+       <button class="boardMember" onclick="handleMove(this, '12')"></button>
+  </foreignObject>
+  <!-- bottom row of buttons -->
+  <foreignObject x="0" y="420" width="200" height="200">
+      <button class="boardMember"  onclick="handleMove(this, '20')"></button>
+  </foreignObject>
+  <foreignObject x="200" y="420" width="200" height="200">
+     <button class="boardMember" onclick="handleMove(this, '21')"></button>
+  </foreignObject>
+  <foreignObject x="400" y="420" width="200" height="200">
+       <button class="boardMember" onclick="handleMove(this, '22')"></button>
+  </foreignObject>
+</svg>
+</body>
+
+
+</html>

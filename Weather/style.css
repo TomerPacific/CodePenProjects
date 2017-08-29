@@ -1,0 +1,10 @@
+*{
+  color:white;
+  text-align:center;
+}
+body{
+	background: url("http://www.cray.com/blog/wp-content/uploads/2015/09/Weather-Blog-Image.jpg");
+	height:100%;
+	width: 100%;
+	background-size: cover;
+}
