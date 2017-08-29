@@ -1,0 +1,32 @@
+body{
+  text-align:center;
+}
+
+#calcOutline{
+  border: 1px solid black;
+  height: 220px;
+  width: 20%;
+  margin: auto auto;
+}
+
+#calcScreen{
+  border: 1px solid black;
+  height:25px;
+  width:50%;
+  margin-left: 30%;
+  border-radius: 5%;
+  background-color: #00ff99;
+  text-align: right;
+}
+
+#firstRow{
+  padding-top: 5%;
+  text-align: left;
+}
+ul{
+  list-style:none;
+}
+
+ul li{
+  display:inline;
+}

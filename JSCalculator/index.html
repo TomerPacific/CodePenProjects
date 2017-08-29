@@ -1,0 +1,57 @@
+<html>
+  
+  <head>
+    
+    <title>Calculator</title>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://use.fontawesome.com/458005145e.js"></script>  
+     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  
+  <body>
+    
+  <div id="calcOutline">
+       
+    <div id="calcScreen">
+      
+    </div>
+    
+    <div id="calcButtons">
+      <ul id="firstRow">
+        <li><button type="button" class="btn btn-danger" onclick="clearScreen()">CE</button></li>
+        <li><button type="button" class="btn" onclick="onPress('7')">7</button></li>
+        <li><button type="button" class="btn" onclick="onPress('8')">8</button></li>
+        <li><button type="button" class="btn" onclick="onPress('9')">9</button></li>
+         <li><button type="button" class="btn btn-success" onclick="onPress('/')">&divide;</button></li>
+      </ul> <!-- end of first row -->
+      <ul id="secondRow">
+        <li><button type="button" class="btn" onclick="onPress('4')">4</button></li>
+        <li><button type="button" class="btn" onclick="onPress('5')">5</button></li>
+        <li><button type="button" class="btn" onclick="onPress('6')">6</button></li>
+         <li><button type="button" class="btn btn-success" onclick="onPress('*')">&times;</button></li>
+      </ul> <!-- end of second row -->
+    </div>
+       <ul id="thirdRow">
+        <li><button type="button" class="btn" onclick="onPress('1')">1</button></li>
+        <li><button type="button" class="btn" onclick="onPress('2')">2</button></li>
+        <li><button type="button" class="btn" onclick="onPress('3')">3</button></li>
+         <li><button type="button" class="btn btn-success" onclick="onPress('-')">-</button></li>
+      </ul> <!-- end of third row -->
+    <ul id="fourthRow">
+        <li><button type="button" class="btn" onclick="onPress('0')">0</button></li>
+        <li><button type="button" class="btn btn-success" onclick="onPress('.')">.</button></li>
+        <li><button type="button" class="btn btn-success" onclick="onPress('+')">+</li>
+         <li><button type="button" class="btn btn-primary" onclick="calc()">=</button></li>
+      </ul> <!-- end of fourth row -->
+  </div>
+    
+  </body>
+  
+  
+</html>

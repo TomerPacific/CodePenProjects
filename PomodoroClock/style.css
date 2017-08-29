@@ -1,0 +1,35 @@
+body{
+  background-color:#99ff66 !important;
+  text-align:center;
+}
+
+#top{
+  font-size: 4em;
+  color:white;
+  font-family: 'Indie Flower', cursive;
+  margin-top: 2%;
+}
+
+#timeLength{
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.time{
+  background-color:transparent;
+  border:0;
+}
+
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+    text-align: center;
+    box-sizing: border-box;
+}
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green; 
+    line-height: 30px; 
+    color: white;
+}
