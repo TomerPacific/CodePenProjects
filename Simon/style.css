@@ -34,6 +34,16 @@ body{
 
 
 #simonSvg{
-  margin:auto auto;
   display: block;
+}
+
+#gameBtns{
+  list-style: none;
+  text-align: center;
+  position: relative;
+  left: -7%;  
+}
+
+#gameBtns li{
+  display: inline;
 }
