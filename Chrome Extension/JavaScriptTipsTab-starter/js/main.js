@@ -24,7 +24,7 @@ var tipsList = [
 ];
 
 var tipLimitCounter = tipsList.length;
-var tipCounter = document.getElementById("tipCount");
+var tipCounter = document.querySelector(".tip-limit-count");
 var jsTip = document.querySelector(".js-tip");
 var tipBtn = document.querySelector(".tip-button");
 tipCounter.innerHTML = tipLimitCounter.toString();
@@ -33,30 +33,29 @@ tipCounter.innerHTML = tipLimitCounter.toString();
 function generateRandomTip()
 {
 	var randomTipIndex = Math.floor(Math.random() * tipsList.length);
-	console.log("Random tip index " + randomTipIndex);
 	var tipToBeShown = tipsList[randomTipIndex];
 	tipsList.splice(randomTipIndex, 1);
-	console.log("Tip chosen " + tipToBeShown);
-	console.log("Tips length " + tipsList.length);
 	return tipToBeShown;
 }
 
-tipBtn.addEventListener("click", function()
-{
+$('.tip-button').click(function(){
 	if(tipLimitCounter > 0)
 	{
+		var el = $(this);
+     	el.before( el.clone(true) ).remove();
 		var tipToBeShown = generateRandomTip();
 		tipLimitCounter--;
 		jsTip.innerHTML = tipToBeShown;
-		tipCounter.innerHTML = tipLimitCounter.toString();
+		$('.tip-limit-count').html(tipLimitCounter.toString());
+		//tipCounter.innerHTML = tipLimitCounter.toString();
+     	
 	}
 
-	if(tipLimitCounter === 0)
+	else if(tipLimitCounter === 0)
 	{
-		tipBtn.classList.add("disabled");
+		this.classList.add("disabled");
 		jsTip.innerHTML = "See you in an another tab!";
-		tipCounter.innerHTML = "None";
+		$('.tip-limit-count').html("None");
 	}
-	
-
 });
+
