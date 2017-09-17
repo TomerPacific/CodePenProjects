@@ -141,8 +141,7 @@ function turnOver()
 
 function checkIfWon()
 {
-	var isThereAWin = winning(gameBoardForAI, whoIsPlaying);
-
+	var isThereAWin = winning(gameBoardForAI, mark);
 	if(isThereAWin)
 	{
 		winner = whoIsPlaying;
@@ -258,6 +257,7 @@ function miniMax(newBoard, player)
 }
 
 function winning(board, player){
+
  if (
  (board[0] == player && board[1] == player && board[2] == player) ||
  (board[3] == player && board[4] == player && board[5] == player) ||
