@@ -5,7 +5,7 @@ var strictModeBtn;
 var startGameBtn;
 var numOfMoves;
 var moves = 1;
-var currentKeyToPress;
+var currentKeyToPress = 0;
 
 var btnsPlayRoutine = ['red', 'blue', 'green', 'yellow', 'green', 'blue', 'blue', 'red', 'red'];
 
@@ -42,9 +42,7 @@ window.onload = function()
 
 function handleGame(){
 
-	for(var i = 0; i < moves; i++){
-		startPlaying(i);
-	}
+	startPlaying(0);
 
 }
 
@@ -56,15 +54,19 @@ function resetGame(){
 
 function startPlaying(index){
 
+		if(index >= moves){
+			return;
+		}
+
 		var whatToPlay = document.getElementById(btnsPlayRoutine[index]);
-		currentKeyToPress = index;
 		switch(whatToPlay.id){
 		case 'red':
 			simonSoundRed.play();
 			whatToPlay.style.background = 'rgba(255,0,0,1)';
 			setTimeout(function(){
 				whatToPlay.style.background = 'rgba(255,0,0,0.6)';
-			},500);
+				startPlaying(++index);
+			},750);
 			
 			break;
 		case 'blue':
@@ -72,6 +74,7 @@ function startPlaying(index){
 			whatToPlay.style.background = 'rgba(0,0,255,1)';
 			setTimeout(function(){
 				whatToPlay.style.background = 'rgba(0,0,255,0.6)';
+				startPlaying(++index);
 			},500);
 			break;
 		case 'green':
@@ -79,6 +82,7 @@ function startPlaying(index){
 			whatToPlay.style.background = 'rgba(0,255,0,1)';
 			setTimeout(function(){
 				whatToPlay.style.background = 'rgba(0,255,0,0.6)';
+				startPlaying(++index);
 			},500);
 			break;
 		case 'yellow':
@@ -86,10 +90,11 @@ function startPlaying(index){
 			whatToPlay.style.opacity = 1;
 			setTimeout(function(){
 				whatToPlay.style.opacity = 0.6;
+				startPlaying(++index);
 			},500);
 			break;
 		default:
-			console.log("Error in button id");
+			console.log("Error in button id " + whatToPlay.id);
 			break;
 		}
 	
@@ -137,12 +142,13 @@ function handleClick(btnId){
 
 	//On correct key pressed
 	if(btnsPlayRoutine[currentKeyToPress] === btnId){
-		if(moves > 1){
+		if(currentKeyToPress < moves){
 			currentKeyToPress++;
 		}
-		else
+		if(currentKeyToPress === moves)
 		{
 			moves++;
+			currentKeyToPress = 0;
 			numOfMoves.innerHTML = moves.toString();
 			handleGame();
 		}
