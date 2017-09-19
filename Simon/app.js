@@ -5,6 +5,7 @@ var strictModeBtn;
 var startGameBtn;
 var numOfMoves;
 var moves = 1;
+var currentKeyToPress;
 
 var btnsPlayRoutine = ['red', 'blue', 'green', 'yellow', 'green', 'blue', 'blue', 'red', 'red'];
 
@@ -34,16 +35,29 @@ window.onload = function()
 	  	{
 	  		gameStarted = true;
 	  		numOfMoves.innerHTML = moves.toString();
-			for(var i = 0; i < moves; i++){
-				startPlaying(i);
-			}
+			handleGame();
 	  	}
 	});
 }
 
+function handleGame(){
+
+	for(var i = 0; i < moves; i++){
+		startPlaying(i);
+	}
+
+}
+
+function resetGame(){
+	moves = 1;
+	numOfMoves.innerHTML = moves.toString();
+	handleGame();
+}
+
 function startPlaying(index){
 
-		var whatToPlay = document.getElementById(btnsPlayRoutine[index].toString());
+		var whatToPlay = document.getElementById(btnsPlayRoutine[index]);
+		currentKeyToPress = index;
 		switch(whatToPlay.id){
 		case 'red':
 			simonSoundRed.play();
@@ -55,23 +69,23 @@ function startPlaying(index){
 			break;
 		case 'blue':
 			simonSoundBlue.play();
-			whatToPlay.style.background = 'rgba(255,0,0,1)';
+			whatToPlay.style.background = 'rgba(0,0,255,1)';
 			setTimeout(function(){
-				whatToPlay.style.background = 'rgba(255,0,0,0.6)';
+				whatToPlay.style.background = 'rgba(0,0,255,0.6)';
 			},500);
 			break;
 		case 'green':
 			simonSoundGreen.play();
-			whatToPlay.style.background = 'rgba(255,0,0,1)';
+			whatToPlay.style.background = 'rgba(0,255,0,1)';
 			setTimeout(function(){
-				whatToPlay.style.background = 'rgba(255,0,0,0.6)';
+				whatToPlay.style.background = 'rgba(0,255,0,0.6)';
 			},500);
 			break;
 		case 'yellow':
 			simonSoundYellow.play();
-			whatToPlay.style.background = 'rgba(255,0,0,1)';
+			whatToPlay.style.opacity = 1;
 			setTimeout(function(){
-				whatToPlay.style.background = 'rgba(255,0,0,0.6)';
+				whatToPlay.style.opacity = 0.6;
 			},500);
 			break;
 		default:
@@ -121,4 +135,22 @@ function handleClick(btnId){
 		}	
 	}
 
+	//On correct key pressed
+	if(btnsPlayRoutine[currentKeyToPress] === btnId){
+		if(moves > 1){
+			currentKeyToPress++;
+		}
+		else
+		{
+			moves++;
+			numOfMoves.innerHTML = moves.toString();
+			handleGame();
+		}
+		
+	}
+	//On wrong key pressed
+	else{
+		alert("Wrong!!!!");
+		resetGame();
+	}
 }
