@@ -120,6 +120,9 @@ $(document).ready(function() {
 });
 
 function handleClick(btnId){
+	if(!machineOn || !gameStarted){
+		return;
+	}
 	if(machineOn && gameStarted){
 	switch(btnId){
 		case 'red':
@@ -150,13 +153,22 @@ function handleClick(btnId){
 			moves++;
 			currentKeyToPress = 0;
 			numOfMoves.innerHTML = moves.toString();
-			handleGame();
+			setTimeout(function(){
+				handleGame();
+			},1000);
+
 		}
 		
 	}
 	//On wrong key pressed
 	else{
 		alert("Wrong!!!!");
-		resetGame();
+		if(isInStrictMode){
+			resetGame();
+		}
+		else
+		{
+			handleGame();
+		}
 	}
 }
