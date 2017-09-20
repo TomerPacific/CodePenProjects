@@ -106,12 +106,10 @@ $(document).ready(function() {
   $("#onBtn").click(function(event){
   	if(!machineOn)
   	{
-  		$(this).animate({"left" : "+=25px"}, "slow");
   		numOfMoves.style.fill="white";
   	}
   	else
   	{
-  		$(this).animate({"left" : "-=25px"}, "slow");
   		numOfMoves.style.fill="black";
   		gameStarted = false;
   		numOfMoves.innerHTML = "0";
@@ -174,10 +172,12 @@ function handleClick(btnId){
 	else{
 		alert("Wrong!!!!");
 		if(isInStrictMode){
+      		currentKeyToPress = 0;
 			resetGame();
 		}
 		else
 		{
+      		currentKeyToPress = 0;
 			handleGame();
 		}
 	}
