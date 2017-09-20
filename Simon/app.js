@@ -6,6 +6,7 @@ var startGameBtn;
 var numOfMoves;
 var moves = 1;
 var currentKeyToPress = 0;
+var max_moves = 0;
 
 var btnsPlayRoutine = ['red', 'blue', 'green', 'yellow', 'green', 'blue', 'blue', 'red', 'red'];
 
@@ -21,6 +22,7 @@ window.onload = function()
 	strictModeBtn = document.getElementById("strict");
 	startGameBtn = document.getElementById("start");
 	numOfMoves = document.getElementById("numOfMoves");
+	max_moves = btnsPlayRoutine.length;
 	strictModeBtn.addEventListener("click", function()
 	{
 		if(machineOn)
@@ -151,12 +153,20 @@ function handleClick(btnId){
 		if(currentKeyToPress === moves)
 		{
 			moves++;
-			currentKeyToPress = 0;
-			numOfMoves.innerHTML = moves.toString();
-			setTimeout(function(){
-				handleGame();
-			},1000);
+			if(moves > max_moves){
+				alert("SUCCESS!!!");
+				resetGame();
+			}
+			else
+			{
+				currentKeyToPress = 0;
+				numOfMoves.innerHTML = moves.toString();
+				setTimeout(function(){
+					handleGame();
+				},1000);
 
+			}
+			
 		}
 		
 	}
