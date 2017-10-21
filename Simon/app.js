@@ -36,8 +36,10 @@ window.onload = function()
 	 	if(machineOn && !gameStarted)
 	  	{
 	  		gameStarted = true;
+        currentKeyToPress = 0;
+        moves = 1;
 	  		numOfMoves.innerHTML = moves.toString();
-			handleGame();
+			  handleGame();
 	  	}
 	});
 }
@@ -63,38 +65,47 @@ function startPlaying(index){
 		var whatToPlay = document.getElementById(btnsPlayRoutine[index]);
 		switch(whatToPlay.id){
 		case 'red':
-			simonSoundRed.play();
-			whatToPlay.style.background = 'rgba(255,0,0,1)';
-			setTimeout(function(){
-				whatToPlay.style.background = 'rgba(255,0,0,0.6)';
-				startPlaying(++index);
-			},750);
-			
-			break;
+    {
+      simonSoundRed.play();
+      whatToPlay.style.background = 'rgba(255,0,0,1)';
+      setTimeout(function(){
+        whatToPlay.style.background = 'rgba(255,0,0,0.6)';
+        startPlaying(++index);
+      },750);
+      break;
+    }
 		case 'blue':
-			simonSoundBlue.play();
-			whatToPlay.style.background = 'rgba(0,0,255,1)';
-			setTimeout(function(){
-				whatToPlay.style.background = 'rgba(0,0,255,0.6)';
-				startPlaying(++index);
-			},500);
-			break;
+    {
+      simonSoundBlue.play();
+      whatToPlay.style.background = 'rgba(0,0,255,1)';
+      setTimeout(function(){
+        whatToPlay.style.background = 'rgba(0,0,255,0.6)';
+        startPlaying(++index);
+      },500);
+      break;
+     }
+			
 		case 'green':
-			simonSoundGreen.play();
-			whatToPlay.style.background = 'rgba(0,255,0,1)';
-			setTimeout(function(){
-				whatToPlay.style.background = 'rgba(0,255,0,0.6)';
-				startPlaying(++index);
-			},500);
-			break;
+    {
+      simonSoundGreen.play();
+      whatToPlay.style.background = 'rgba(0,255,0,1)';
+      setTimeout(function(){
+        whatToPlay.style.background = 'rgba(0,255,0,0.6)';
+        startPlaying(++index);
+      },500);
+      break;
+    }
 		case 'yellow':
-			simonSoundYellow.play();
-			whatToPlay.style.opacity = 1;
-			setTimeout(function(){
-				whatToPlay.style.opacity = 0.6;
-				startPlaying(++index);
-			},500);
-			break;
+    {
+      simonSoundYellow.play();
+      whatToPlay.style.opacity = 1;
+      setTimeout(function(){
+        whatToPlay.style.opacity = 0.6;
+        startPlaying(++index);
+      },500);
+      break;
+     }
+			
 		default:
 			console.log("Error in button id " + whatToPlay.id);
 			break;
@@ -172,12 +183,12 @@ function handleClick(btnId){
 	else{
 		alert("Wrong!!!!");
 		if(isInStrictMode){
-      		currentKeyToPress = 0;
+      currentKeyToPress = 0;
 			resetGame();
 		}
 		else
 		{
-      		currentKeyToPress = 0;
+      currentKeyToPress = 0;
 			handleGame();
 		}
 	}
