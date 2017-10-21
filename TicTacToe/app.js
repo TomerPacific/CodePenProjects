@@ -33,7 +33,7 @@ function restartGame()
 	for(var i = childrenOfSvg.length - 1; i > childrenOfSvg.length - amountOfMarks; i--)
 	{
 		var elem = childrenOfSvg[i];
-		if(elem.id === "5555")
+		if(elem.id === "paintedMark")
 		{
 			mySvg.removeChild(childrenOfSvg[i]);
 		}
@@ -117,7 +117,7 @@ function figureOutMark(index)
 function createMark(first, second)
 {
 	var newText = document.createElementNS(svgNS,"text");
-	newText.setAttributeNS(null, "id", "5555");
+	newText.setAttributeNS(null, "id", "paintedMark");
 	newText.setAttributeNS(null,"x",first + X_POSITION_PLACEMENT_FACTOR);     
 	newText.setAttributeNS(null,"y",second + Y_POSITION_PLACEMENT_FACTOR); 
 	newText.setAttributeNS(null,"font-size","100");
@@ -256,6 +256,7 @@ function miniMax(newBoard, player)
 	return moves[bestMove];
 }
 
+//Method to check if either the Computer or Player has won
 function winning(board, player){
 
  if (
