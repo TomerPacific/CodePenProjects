@@ -1,4 +1,3 @@
-// Variables for MiniMax Algorithm
 var gameBoardForAI = ["0","1","2", "3", "4", "5", "6", "7", "8"];
 var aiPlayer = "O";
 var humanPlayer = "X";
@@ -12,6 +11,7 @@ var mySvg;
 var amountOfMarks = 0;
 const X_POSITION_PLACEMENT_FACTOR = 65;
 const Y_POSITION_PLACEMENT_FACTOR = 130;
+const SCORE_FOR_MINMAX = 10000;
 
 window.onload = function()
 {
@@ -75,7 +75,7 @@ function handleComputerMove()
 
 }
 
-
+//figureOutMark method used to find the corresponding place of the mark according to the index
 function figureOutMark(index)
 {
 	var result;
@@ -232,7 +232,7 @@ function miniMax(newBoard, player)
 	var bestMove;
 	if(player === aiPlayer)
 	{
-		var bestScore = -10000;
+		var bestScore = SCORE_FOR_MINMAX * -1;
 		for(var i = 0; i < moves.length; i++)
 		{
 			if(moves[i].score > bestScore)
@@ -244,7 +244,7 @@ function miniMax(newBoard, player)
 	}
 	else
 	{
-		var bestScore = 10000;
+		var bestScore = SCORE_FOR_MINMAX;
 	    for(var i = 0; i < moves.length; i++){
 	      if(moves[i].score < bestScore){
 		        bestScore = moves[i].score;
