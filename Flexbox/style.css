@@ -1,0 +1,47 @@
+*{
+  font-family: 'Spectral SC', serif !important;
+}
+
+h1{
+  display:flex;
+  justify-content:center;
+}
+
+#main{
+  display:flex;
+  justify-content:center;
+  align-items:space-between;
+  margin-bottom: 5%;
+}
+
+#flexBtns{
+  list-style:none;
+}
+
+#flexBtns li{
+  display:inline;
+}
+
+.flexBtn{
+  font-size: 0.7em;
+}
+
+#userInput{
+  display:flex;
+  font-size: 1.5em;
+}
+
+.justifyLeft{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.justifyRight{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.justifyCenter{
+  display: flex;
+  justify-content: center;
+}
