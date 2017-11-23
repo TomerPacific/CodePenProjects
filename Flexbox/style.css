@@ -7,18 +7,18 @@ h1{
   justify-content:center;
 }
 
-#main{
+#main, #secondUl{
   display:flex;
   justify-content:center;
   align-items:space-between;
   margin-bottom: 5%;
 }
 
-#flexBtns{
+ul{
   list-style:none;
 }
 
-#flexBtns li{
+ul li{
   display:inline;
 }
 
@@ -31,17 +31,27 @@ h1{
   font-size: 1.5em;
 }
 
-.justifyLeft{
-  display: flex;
+.justify-left{
   justify-content: flex-start;
 }
 
-.justifyRight{
-  display: flex;
+.justify-right{
   justify-content: flex-end;
 }
 
-.justifyCenter{
-  display: flex;
+.justify-center{
   justify-content: center;
+}
+.space-between{
+  justify-content: space-between;
+}
+
+.space-around{
+  justify-content: space-around;
+}
+.direction-row{
+  flex-direction: row;
+}
+.direction-column{
+  flex-direction: column;
 }
