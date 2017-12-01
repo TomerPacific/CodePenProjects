@@ -7,11 +7,11 @@ h1{
   justify-content:center;
 }
 
-#main, #secondUl{
+#main, #secondUl, #thirdUl{
   display:flex;
   justify-content:center;
   align-items:space-between;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 ul{
@@ -23,13 +23,20 @@ ul li{
 }
 
 .flexBtn{
-  font-size: 0.7em;
+  font-size: 0.8em;
+}
+
+#reset{
+  margin-left: 47%;
+  margin-bottom: 2%;
 }
 
 #userInput{
   display:flex;
   font-size: 1.5em;
 }
+
+/*Justify Content CSS */
 
 .justify-left{
   justify-content: flex-start;
@@ -45,13 +52,30 @@ ul li{
 .space-between{
   justify-content: space-between;
 }
-
 .space-around{
   justify-content: space-around;
 }
+
+/* Direction CSS */
+
 .direction-row{
   flex-direction: row;
 }
+.direction-row-reverse{
+  flex-direction: row-reverse;
+}
 .direction-column{
   flex-direction: column;
+}
+
+/* Wrap CSS */
+.nowrap{
+  flex-wrap: nowrap;
+}
+
+.wrap{
+  flex-wrap: wrap;
+}
+.wrap-reverse{
+  flex-wrap: wrap-reverse;
 }

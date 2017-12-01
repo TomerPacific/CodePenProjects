@@ -9,6 +9,7 @@
   
   <body>
     <h1>Flexbox</h1>
+    <button class="btn btn-danger" data-btn-type="reset" id="reset" onclick="reset()">RESET</button>
     <div id="main">
         <ul id="justifyBtns">
           <li><button class="flexBtn btn btn-primary" data-btn-type="justify-left">Justify-Content Left</button></li>
@@ -23,12 +24,22 @@
           <li><button class="flexBtn btn btn-info" data-btn-type="direction-row">Direction Row</button></li>
            <li><button class="flexBtn btn btn-info" data-btn-type="direction-row-reverse">Direction Row Reverse</button></li>
           <li><button class="flexBtn btn btn-info" data-btn-type="direction-column">Direction Column</button></li>
+          <li><button class="flexBtn btn btn-info" data-btn-type="direction-column-reverse">Direction Column Reverse</button></li>
+        </ul>
+      </div>
+      <div id="thirdUl">
+        <ul id="wrapBtns">
+          <li><button class="flexBtn btn btn-success" data-btn-type="nowrap">No Wrap</button></li>
+           <li><button class="flexBtn btn btn-success" data-btn-type="wrap">Wrap</button></li>
+          <li><button class="flexBtn btn btn-success" data-btn-type="wrap-reverse">Wrap Reverse</button></li>
         </ul>
       </div>
     </div>
     
     <div id="userInput">
-      This Will Change This Will Change This Will Change
+      <div>This Will Change</div>
+      <div>This Will Change Too</div>
+      <div>This Will Change Also</div>
     </div>
     
     
