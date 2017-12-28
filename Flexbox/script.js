@@ -1,47 +1,28 @@
 const btns = document.querySelectorAll('.flexBtn');
 
 let userInputDiv = document.querySelector('#userInput');
+let btnClasses = [];
 
-function checkSimilar(classList, classToBeAdded){
-
-  let startOfClass = classToBeAdded.split('-');
-  for(let i = 0; i < classList.length; i++){
-    if(classList[i].split('-')[0] === startOfClass[0]){
-      classList.remove(classList[i]);
-    }
-  }
-  return classList;
-}
 
 function btnPressed(event){
   event.preventDefault();
   const id = this.dataset.btnType;
+  const dataClass = this.dataset.btnClass;
   let classList = userInputDiv.classList;
-  classList = checkSimilar(classList, id);
-  if(!classList.contains(id)){
+
+  if(btnClasses.includes(dataClass)) {
+    for(let i = 0; i < classList.length; i++) {
+      if(classList[i].includes(dataClass)) {
+        classList.remove(classList[i]);
+      }
+    }
     classList.add(id);
   }
-
-
-  //const classes = userInputDiv.className.split(' ');
-  // let classAlreadyInUse = false;
-  // for(const key in classes){
-
-  //   if(checkIfSimilar(classes, key, id)){
-  //     classAlreadyInUse = true;
-  //     break;
-  //   }
-
-  // 	if(classes[key] === id){
-  // 		classAlreadyInUse = true;
-  // 		break;
-  // 	}
-  // }
-
-  // if(!classAlreadyInUse)
-  // {
-  // 	userInputDiv.className += " " + id;
-  // }
+  else{
+      btnClasses.push(dataClass);
+      classList.add(id);
+  }
+  
 }
 
 btns.forEach(btn => {
@@ -50,4 +31,5 @@ btns.forEach(btn => {
 
 function reset(){
 	userInputDiv.className = "";
+  btnClasses = [];
 }
