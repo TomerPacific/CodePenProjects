@@ -2,6 +2,7 @@ const btns = document.querySelectorAll('.flexBtn');
 
 let userInputDiv = document.querySelector('#userInput');
 let btnClasses = [];
+const columnClass = "col-md-6";
 
 
 function btnPressed(event){
@@ -10,6 +11,7 @@ function btnPressed(event){
   const dataClass = this.dataset.btnClass;
   let classList = userInputDiv.classList;
   let isJustifyProperty = dataClass.includes("space") || dataClass.includes("justify");
+  let shouldAddColumnClass = dataClass.includes("wrap") ? true : false;
   if(btnClasses.includes(dataClass) || isJustifyProperty) {
     for(let i = 0; i < classList.length; i++) {
       if(classList[i].includes(dataClass) || 
@@ -17,12 +19,19 @@ function btnPressed(event){
         isJustifyProperty && classList[i].includes("space")) {
         classList.remove(classList[i]);
       }
-    }
+    } // end for
     classList.add(id);
-  }
-  else{
+  } else {
       btnClasses.push(dataClass);
       classList.add(id);
+  }
+  console.log(shouldAddColumnClass);
+  console.log(classList);
+  if(shouldAddColumnClass && ![...classList].includes(columnClass)){
+    classList.add(columnClass);
+  }
+  else {
+     classList.remove(columnClass);
   }
   
 }
