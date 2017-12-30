@@ -9,10 +9,12 @@ function btnPressed(event){
   const id = this.dataset.btnType;
   const dataClass = this.dataset.btnClass;
   let classList = userInputDiv.classList;
-
-  if(btnClasses.includes(dataClass)) {
+  let isJustifyProperty = dataClass.includes("space") || dataClass.includes("justify");
+  if(btnClasses.includes(dataClass) || isJustifyProperty) {
     for(let i = 0; i < classList.length; i++) {
-      if(classList[i].includes(dataClass)) {
+      if(classList[i].includes(dataClass) || 
+        (isJustifyProperty && classList[i].includes("justify")) ||
+        isJustifyProperty && classList[i].includes("space")) {
         classList.remove(classList[i]);
       }
     }
