@@ -25,8 +25,6 @@ function btnPressed(event){
       btnClasses.push(dataClass);
       classList.add(id);
   }
-  console.log(shouldAddColumnClass);
-  console.log(classList);
   if(shouldAddColumnClass && ![...classList].includes(columnClass)){
     classList.add(columnClass);
   }
