@@ -1,0 +1,29 @@
+#parent {
+  border: 3px solid blue;
+  display: grid;
+}
+
+#firstChild {
+  grid-column-start: 1;
+  grid-column-end: five;
+  grid-row-start: row1-start
+  grid-row-end: 3
+}
+
+#secondChild {
+  grid-column-start: 2;
+  grid-column-end: auto;
+  grid-row-start: row1-start
+  grid-row-end: 3
+}
+
+#thirdChild {
+  grid-column : 3 / span 2;
+}
+
+.child {
+  border: 2px solid green;
+}
+.grandChild {
+  border: 1px solid red;
+}
