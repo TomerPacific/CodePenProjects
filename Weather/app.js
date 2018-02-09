@@ -2,7 +2,9 @@ var Geo={};
 var key ="5e8c9b467f0c80b9a4c47f15980d1849";
 var temperature = 0;
 var typeOfDegree = true;
-var endOfDegree = "C";
+const CELSUIS = '&#8451';
+const FAHRENHEIT = '&#8457';
+var endOfDegree = CELSUIS;
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -27,17 +29,16 @@ function worked(res)
    var country = res.sys.country;
    var description = res.weather[0].description;
    var weatherCond = res.weather[0].icon;
-   console.log("Clouds " + clouds);
-   document.getElementById("location").innerHTML = country;
-   document.getElementById("description").innerHTML = description;
-   document.getElementById("temp").innerHTML = temperature + '9\xB0' + endOfDegree;
+   document.getElementById("location").innerHTML = country ? country : "Unknown Country";
+   document.getElementById("description").innerHTML = description ? description : "No Description";
+   document.getElementById("temp").innerHTML = temperature + '&#8451';
    document.getElementById("wind").innerHTML = windSpeed + " At a degree of " + windDegree;
    document.getElementById("weatherIcon").src = 'http://openweathermap.org/img/w/' + weatherCond + '.png';
 }
 
 function error()
 {
-  alert("Couldn't find you");
+  alert("Couldn't find you. Please allow us to access your location.");
 }
 
 function convertDegrees()
@@ -46,18 +47,18 @@ function convertDegrees()
   if(typeOfDegree)
   {
     temperature = (temperature * 9/5)  + 32;
-    endOfDegree = "F";
+    endOfDegree = FAHRENHEIT;
     typeOfDegree = false;
   }
   else
   {
     temperature = (temperature - 32)  * (5/9);
-    endOfDegree = "C";
+    endOfDegree = CELSUIS;
     typeOfDegree = true;
   }
 
   temperature = temperature.toFixed(2);
-  document.getElementById("temp").innerHTML = temperature + '9\xB0' + endOfDegree;
+  document.getElementById("temp").innerHTML = temperature + endOfDegree;
 }
 
 window.onload = function(){
