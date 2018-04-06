@@ -1,29 +1,20 @@
-#parent {
-  border: 3px solid blue;
+#parent{
+  text-align: center;
+}
+
+input {
+  width: 5%;
+}
+
+#render {
   display: grid;
+  grid-gap: 20px;
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
 }
 
-#firstChild {
-  grid-column-start: 1;
-  grid-column-end: five;
-  grid-row-start: row1-start
-  grid-row-end: 3
-}
-
-#secondChild {
-  grid-column-start: 2;
-  grid-column-end: auto;
-  grid-row-start: row1-start
-  grid-row-end: 3
-}
-
-#thirdChild {
-  grid-column : 3 / span 2;
-}
-
-.child {
-  border: 2px solid green;
-}
-.grandChild {
-  border: 1px solid red;
+.gridElement {
+	border : 2px dashed blue;
+	background: green;
 }
