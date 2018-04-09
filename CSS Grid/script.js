@@ -1,4 +1,5 @@
 let renderDiv = document.querySelector("#render");
+let resetBtn = document.querySelector("#resetBtn");
 let counter = 1;
 
 let rowBtn = document.getElementById("rowBtn");
@@ -22,3 +23,14 @@ columnBtn.addEventListener("click", function(e) {
   let amountOfColumns = columnInput.value;
   renderDiv.style.gridTemplateColumns="repeat("+ amountOfColumns + ", 100px)";
 });
+
+
+resetBtn.addEventListener("click", function(e) {
+	renderDiv.innerHTML = "";
+	renderDiv.className = "";
+	renderDiv.removeAttribute('style');
+	counter = 1;
+	columnInput.value = "";
+	rowInput.value = "";
+});
+
