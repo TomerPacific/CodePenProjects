@@ -1,4 +1,5 @@
 let renderDiv = document.querySelector("#render");
+let counter = 1;
 
 let rowBtn = document.getElementById("rowBtn");
 let rowInput = document.getElementById("rows");
@@ -7,7 +8,9 @@ rowBtn.addEventListener("click", function(e) {
   renderDiv.style.gridTemplateRows="repeat("+ amountOfRows + ", 100px)";
   for(let i = 0; i < amountOfRows; i++) {
   	let divElement = document.createElement('div');
-  	divElement.classList.add("gridElement");
+  	divElement.classList.add('gridElement');
+  	divElement.innerHTML = counter;
+  	counter++;
   	renderDiv.appendChild(divElement);
   }
 });

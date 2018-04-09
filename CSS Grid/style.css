@@ -8,13 +8,14 @@ input {
 
 #render {
   display: grid;
-  grid-gap: 20px;
   border: 1px solid black;
   width: 100%;
   height: 100%;
 }
 
 .gridElement {
-	border : 2px dashed blue;
-	background: green;
+	border : 2px dashed #01FF70;
+	background: #001f3f;
+	text-align: center;
+	color: #FFFFFF;
 }
