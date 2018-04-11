@@ -2,6 +2,7 @@ let renderDiv = document.querySelector("#render");
 let resetBtn = document.querySelector("#resetBtn");
 let counter = 1;
 
+//Grid rows
 let rowBtn = document.getElementById("rowBtn");
 let rowInput = document.getElementById("rows");
 rowBtn.addEventListener("click", function(e) {
@@ -16,7 +17,7 @@ rowBtn.addEventListener("click", function(e) {
   }
 });
 
-
+//Grid columns
 let columnBtn = document.getElementById("columnBtn");
 let columnInput = document.getElementById("columns");
 columnBtn.addEventListener("click", function(e) {
@@ -24,7 +25,16 @@ columnBtn.addEventListener("click", function(e) {
   renderDiv.style.gridTemplateColumns="repeat("+ amountOfColumns + ", 100px)";
 });
 
+//Grid gap
+let gapBtn = document.getElementById("gapBtn");
+let gapInput = document.getElementById("gap");
+gapBtn.addEventListener("click", function(e) {
+  let gapAmount = gapInput.value;
+  renderDiv.style.gridGap = gapAmount+"%";
+});
 
+
+//Reset
 resetBtn.addEventListener("click", function(e) {
 	renderDiv.innerHTML = "";
 	renderDiv.className = "";
