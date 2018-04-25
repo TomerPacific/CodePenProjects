@@ -1,31 +1,43 @@
-html{
-  background-color:grey;
+html {
+  text-align: center;
+  background-color: gray;
+  color:white;
 }
 
-img{
-  margin-top:50px;
-  margin-left: 340px;
+#header {
+  grid-area: header;
+  width: 100%;
+  height: 100%;
 }
 
-#end{
-  text-align:center;
+#main {
+  grid-area: main;
+  background:url("https://github.com/TomerPacific/CodePenImages/blob/master/campfire.jpeg?raw=true");  
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 5%;
+  border: 2px solid white;
 }
 
-#bottom{
-  margin-top:50px;
-  text-align:center;
-
-}
-#onlylink{
-  color:black;
-  text-decoration:none;
+#footer {
+  margin-top: 10%;
+  grid-area: footer
 }
 
-#onlylink:hover{
-  color:blue;
-}
-
-img
-{
-  margin: auto auto;
+#container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto; 
+  grid-template-rows: auto;
+  grid-template-areas: 
+      "header header header header"
+      "main main main main"
+      "main main main main"
+      "main main main main"
+      "main main main main"
+      "main main main main"
+      "main main main main"
+      "main main main main"
+      "footer footer footer footer"
 }
