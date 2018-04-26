@@ -2,6 +2,20 @@ html {
   text-align: center;
   background-color: gray;
   color:white;
+  font-family: 'Abril Fatface', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: black;
+}
+
+#information, #end {
+  -webkit-animation-delay: 1s;
 }
 
 #header {
