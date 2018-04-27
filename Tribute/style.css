@@ -14,6 +14,13 @@ a:hover {
   color: black;
 }
 
+img {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 5%;
+  border: 2px solid white;
+}
+
 #information, #end {
   -webkit-animation-delay: 1s;
 }
@@ -26,15 +33,9 @@ a:hover {
 
 #main {
   grid-area: main;
-  background:url("https://github.com/TomerPacific/CodePenImages/blob/master/campfire.jpeg?raw=true");  
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  border-radius: 5%;
-  border: 2px solid white;
 }
 
 #footer {
-  margin-top: 10%;
   grid-area: footer
 }
 
