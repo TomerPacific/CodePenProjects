@@ -1,6 +1,7 @@
 const btns = document.querySelectorAll('.flexBtn');
 
 let userInputDiv = document.querySelector('#userInput');
+let flexClassesParagraph = document.querySelector('#flexClassesParagraph');
 let btnClasses = [];
 const columnClass = "col-md-6";
 
@@ -31,7 +32,8 @@ function btnPressed(event){
   else {
      classList.remove(columnClass);
   }
-  
+
+ addClassesToParagraph();
 }
 
 btns.forEach(btn => {
@@ -41,4 +43,15 @@ btns.forEach(btn => {
 function reset(){
 	userInputDiv.className = "";
   btnClasses = [];
+  flexClassesParagraph.innerHTML = "";
+}
+
+function addClassesToParagraph() {
+  let paragraphText = "";
+  for(let i = 0; i < userInputDiv.classList.length; i++) {
+    if(userInputDiv.classList[i] !== columnClass) {
+      paragraphText += " " + userInputDiv.classList[i];
+    }
+  }
+   flexClassesParagraph.innerHTML = paragraphText;
 }
