@@ -20,6 +20,7 @@ var todoList = {
     });
   },
   changeTodo: function(position, todoText) {
+    console.log("5555 changeTodo position" + position + " text " + todoText);
     this.todos[position].todoText = todoText;
   },
   deleteTodo: function(position) {
@@ -62,6 +63,7 @@ var handlers = {
     view.displayTodos(CONST_CALLING_DISPLAY_SOURCE.ADD, todoList.length - 1);
   },
   changeTodo: function() {
+    console.log("5555 handlers changeTodo");
     var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
     var changeTodoTextInput = document.getElementById('changeTodoTextInput');
     todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
@@ -136,7 +138,7 @@ var view = {
     {
       todosUl.innerHTML = "Your List Is Empty";
       return;
-    }
+    } 
 
     todoList.todos.forEach(function(todo, position){
       if(todo.justAdded)
@@ -199,18 +201,20 @@ var view = {
   },
   setUpEventListeners : function () {
     var todosUl = document.querySelector("ul");
-    todosUl.innerHTML = "Your List Is Empty";
+    // todosUl.innerHTML = "Your List Is Empty";
     todosUl.addEventListener("click", function(event){
       var elementClicked = event.target;
-      if(elementClicked.className === "deleteButton todoBtns animated fadeIn")
+      var listItemId = elementClicked.parentElement.parentElement.id;
+
+      if(elementClicked.className === "fa fa-trash")
       {
-        handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+        handlers.deleteTodo(parseInt(listItemId));
       }
-      else if(elementClicked.className === "toggleButton todoBtns animated fadeIn"){
-        handlers.toggleCompleted(parseInt(elementClicked.parentNode.id));
+      else if(elementClicked.className === "fa fa-check"){
+        handlers.toggleCompleted(parseInt(listItemId));
       }
-      else if(elementClicked.className === "editButton todoBtns animated fadeIn"){
-        handlers.makeLiEditable(elementClicked.parentNode.id);
+      else if(elementClicked.className === "fa fa-pencil"){
+        handlers.makeLiEditable(listItemId);
       }
     });
 
