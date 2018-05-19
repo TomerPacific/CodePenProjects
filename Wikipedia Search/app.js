@@ -10,16 +10,24 @@ function success(result)
 {
   var li;
   var p;
+  var header;
   var queryResults = result.query.search;
   var resultList = document.getElementById("resultList");
+
+  resultList.innerHTML = "";
+
   for(var i = 0; i < queryResults.length; i++)
   {
-    li = document.createElement("li");
-    li.appendChild(document.createTextNode(queryResults[i].title));
+    li = document.createElement("li")
+    header = document.createElement("h2");
+    var headerText = document.createTextNode(queryResults[i].title);
+    header.appendChild(headerText);
+    li.appendChild(header);
     p = document.createElement("p");
     p.innerHTML = queryResults[i].snippet;
     p.setAttribute("class", "snippets");
     li.appendChild(p);
+    li.classList.add("article");
     resultList.appendChild(li);
   }
 

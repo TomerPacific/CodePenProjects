@@ -62,3 +62,8 @@ form{
   font-size: 1em;
   color: white;
 }
+
+.article{
+  border: 2px solid black;
+  margin-bottom: 1%;
+}
