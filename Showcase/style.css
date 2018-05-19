@@ -1,0 +1,92 @@
+body{
+	text-align: center;
+	font-family: 'Oswald', sans-serif !important; 
+}
+
+ul{
+	list-style: none;
+}
+
+.nav-tabs{
+	background-color: black !important;
+}
+.nav-tabs > li > a{
+	color:white !important;
+}
+.nav-tabs > li.active > a{
+	color:black !important;
+}
+
+.codeSchoolBadge{
+	height: 10%;
+	width: 10%;
+	padding: 2%;
+	box-shadow: 10px 10px 5px #888888;
+	border-radius: 25px;
+}
+div{
+	padding: 2%;
+}
+
+a{
+	text-decoration: none !important;
+	color: black !important;
+}
+
+a:hover{
+	color:blue !important;
+}
+
+#skills{
+	font-size: 1.5em;
+}
+
+#codeSchool{
+	width: 50%;
+	margin: auto auto;
+	color:white;
+	background: #000000 url(https://www.codeschool.com/assets/meta/og-avatar-541739b5880b8586eeb033747a8a2cf3e689860d59b506d29a9633aed86d057d.png) 50% 50% no-repeat;
+}
+
+#codecademy{
+	width: 50%;
+	margin: auto auto;
+	color:white;
+	background: #000000 url(http://s3.amazonaws.com/codecademy-blog/assets/logo_blue_dark.png) 50% 50% no-repeat;
+}
+
+#udemy{
+	width: 50%;
+	margin: auto auto;
+	color:white;
+	background: #000000 url(https://www.udemy.com/staticx/udemy/images/v4/logo.jpg) 50% 50% no-repeat;
+}
+
+#coursera{
+	width: 50%;
+	margin: auto auto;
+	color:white;
+	background: #000000 url(https://rctom.hbs.org/wp-content/uploads/sites/4/2016/11/coursera-logo-nobg.png) 50% 50% no-repeat;
+}
+#freeCodeCamp{
+	width: 22%;
+	margin: auto auto;
+	color:black;
+	background: #000000 url(https://avatars0.githubusercontent.com/u/9892522?v=4&s=400) 50% 50% no-repeat;
+}
+
+h2{
+	text-decoration: underline;
+}
+
+#fcc{
+	width: 50%;
+	height: 50%;
+}
+
+#mediumImg{
+  width: 50%;
+  height: 50%;
+  border: 1px solid black;
+  box-shadow: 10px 10px;
+}

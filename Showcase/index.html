@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Showcase</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <script src="https://use.fontawesome.com/458005145e.js"></script>
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a data-toggle="tab" role="tab" href="#First">Code-School &nbsp;<i class="fa fa-code" aria-hidden="true"></i></a></li>
+        <li role="presentation"><a data-toggle="tab" role="tab" href="#Second">Codecademy &nbsp; <i class="fa fa-university" aria-hidden="true"></i></a></li>
+        <li role="presentation" ><a data-toggle="tab" role="tab" href="#Third">Udemy &nbsp; <i class="fa fa-terminal" aria-hidden="true"></i></a></li>
+        <li role="presentation" ><a data-toggle="tab" role="tab" href="#Fourth">Coursera &nbsp; <i class="fa fa-html5" aria-hidden="true"></i></a></li>
+        <li role="presentation" ><a data-toggle="tab" role="tab" href="#Fifth">FreeCodeCamp &nbsp; <i class="fa fa-free-code-camp" aria-hidden="true"></i></a></li>
+        <li role="presentation" ><a data-toggle="tab" role="tab" href="#Sixth">Medium &nbsp; <i class="fa fa-medium" aria-hidden="true"></i></a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="First">
+            <div id="codeSchool">
+              <h1>Code School</h1>
+            </div>
+            <h3 id="codeSchoolUserName"></h3>
+            <h3 id="codeSchoolPoints"></h3>
+              <div>
+                <h2>Code School - Courses Completed</h2>
+                  <ul id="codeSchoolCompleted">
+
+                  </ul>
+              </div>
+              <div>
+                 <h2>Code School - Courses In Progress</h2>
+                  <ul id="codeSchoolInProgress">
+
+                  </ul>
+
+              </div>
+            </div> <!-- end tab-pane -->
+          <div class="tab-pane fade" id="Second">
+            <div id="codecademy">
+              <h1>Codecademy</h1>
+              <h4>Disclaimer : Since Codecademy does not have any API or JSON to get their data, the following data is not loaded dynamically</h4>
+            </div>
+
+            <h3 id="codecademyUserName"><a href="https://www.codecademy.com/tomerpacific" target="_blank">- TomerPacific -</a></h3>
+            <h3 id="codecademyPoints"></h3>
+              <div>
+              <h3>Skills</h3>
+              <p id="skills"></p>
+              </div>
+
+              <div>
+                <h2>Codecademy - Lessons Completed</h2>
+                  <ul id="codecademyCompleted">
+
+                  </ul>
+              </div>
+        </div> <!-- end tab-pane div -->
+
+        <div class="tab-pane fade" id="Third">
+            <div id="udemy">
+              <h1>Udemy</h1>
+              
+            </div>
+
+            <h3 id="udemyUserName"><a href="https://www.udemy.com/user/45d0a9ca-af2b-49d3-b916-fb7275045fe2/" target="_blank">- TomerPacific -</a></h3>
+            <h3 id="udemyPoints"></h3>
+              
+              <div>
+                <h2>Udemy - Lessons Completed</h2>
+                  <ul id="udemyCompleted">
+
+                  </ul>
+              </div>
+        </div> <!-- end tab-pane div -->
+
+        <div class="tab-pane fade" id="Fourth">
+            <div id="coursera">
+              <h1>Coursera</h1>
+              
+            </div>
+
+            <h3 id="courseraUserName"><a href="#" target="_blank">- TomerPacific -</a></h3>
+            <h3 id="courseraPoints"></h3>
+              
+              <div>
+                <h2>Coursera - Lessons Completed</h2>
+                  <ul id="courseraCompleted">
+
+                  </ul>
+              </div>
+        </div> <!-- end tab-pane div -->
+
+        <div class="tab-pane fade" id="Fifth">
+            <div id="freeCodeCamp">
+              <h1>FreeCodeCamp</h1>
+              
+            </div>
+
+            <h3 id="freeCodeCampUserName"><a href="https://www.freecodecamp.org/tomerpacific" target="_blank">- TomerPacific -</a></h3>
+              
+              <div>
+                <a href="https://www.freecodecamp.org/tomerpacific/front-end-certification"><img id="fcc" src="https://github.com/TomerPacific/CourseDisplay/blob/master/frontendcertificatefcc.jpg?raw=true"/></a>
+              </div>
+        </div> <!-- end tab-pane div -->
+
+        <div class="tab-pane fade" id="Sixth">
+              <img src="https://github.com/TomerPacific/CodePenImages/blob/master/1_5ztbgEt4NqpVaxTc64C-XA.png?raw=true" id="mediumImg"/>
+          <h3 id="mediumUserName"><a href="https://medium.com/@tomerpacific">TomerPacific</a></h3>
+              <div>
+                <h2>Medium Articles</h2>
+                  <ul id="mediumArticles">
+                    <li><a href="https://medium.com/@tomerpacific/what-a-developer-goes-through-when-looking-for-a-second-job-8bd0a37471dd">What A Developer Goes Through When Looking For A Second Job</a></li>
+                  </ul>
+              </div>
+        </div> <!-- end tab-pane -->
+        
+      </div> <!-- end of tab-content -->
+
+        <script src="tools.js"></script>
+        <script src="script.js"></script>
+        <script src="codecademy.js"></script>
+        <script src="udemy.js"></script>
+      <script>
+         $(document).ready(function(){
+          $('a[data-toggle="tab"]').on('shown.bs.tab', function(e){
+              var currentTab = $(e.target).text(); // get current tab
+              var LastTab = $(e.relatedTarget).text(); // get last tab
+              var skillsElem = document.getElementById("skills");
+              if(currentTab.trim() === "Codecademy" && skillsElem.innerText === ''){
+                  getJSON("https://cors-anywhere.herokuapp.com/http://www.codecademy.com/api/v1/users/tomerpacific/achievements.json13", function(err, data) {
+                  if (err !== null) {
+                   console.log("Error " + err);
+                  } 
+                  else
+                  {
+                    console.log("here");
+                    countUp("codecademyPoints", "0", "1571", 2000);
+                    var badges = data['items'];
+                    publishSkills();
+                    publishLessons(badges);
+                  } // end else
+                });
+              } // end Codecademy if clause
+           else if(currentTab.trim() === "Udemy" && skillsElem.innerText === ''){
+              getUdemyData();
+           }
+          });
+      });
+    </script>
+  </body>
+</html>
