@@ -1,0 +1,47 @@
+body{
+	text-align: center;
+}
+
+h1{
+		font-family: 'Oswald', sans-serif !important;
+    margin-top: 5%;
+}
+
+body{
+	background-color: #B2B5B5 !important;
+}
+
+ul{
+	list-style: none;
+  position:relative;
+  left: -1.5%;
+  font-size: 1.2em;
+  font-family: 'Dancing Script', cursive;
+}
+
+.todoBtns{
+  border-radius: 50%;
+}
+.deleteButton{
+	margin-left : 0.5%;
+  background-color:red;
+}
+.toggleButton{
+  background-color:green;
+  
+} .editButton{
+  background-color: yellow;
+}
+
+#toggleAll{
+  border : 2px solid black;
+  border-radius: 5%;
+  font-family: 'Oswald', sans-serif !important;
+  width : 6%;
+}
+#toggleAll:hover{
+  color: black;
+}
+.completed{
+	text-decoration: line-through;
+}
