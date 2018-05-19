@@ -20,7 +20,6 @@ var todoList = {
     });
   },
   changeTodo: function(position, todoText) {
-    console.log("5555 changeTodo position" + position + " text " + todoText);
     this.todos[position].todoText = todoText;
   },
   deleteTodo: function(position) {
@@ -63,7 +62,6 @@ var handlers = {
     view.displayTodos(CONST_CALLING_DISPLAY_SOURCE.ADD, todoList.length - 1);
   },
   changeTodo: function() {
-    console.log("5555 handlers changeTodo");
     var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
     var changeTodoTextInput = document.getElementById('changeTodoTextInput');
     todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
@@ -134,12 +132,6 @@ var view = {
       } // end for
     }
 
-    if(todoList.todos.length === 0)
-    {
-      todosUl.innerHTML = "Your List Is Empty";
-      return;
-    } 
-
     todoList.todos.forEach(function(todo, position){
       if(todo.justAdded)
       {
@@ -201,7 +193,6 @@ var view = {
   },
   setUpEventListeners : function () {
     var todosUl = document.querySelector("ul");
-    // todosUl.innerHTML = "Your List Is Empty";
     todosUl.addEventListener("click", function(event){
       var elementClicked = event.target;
       var listItemId = elementClicked.parentElement.parentElement.id;
