@@ -1,26 +1,26 @@
 var Geo={};
-var key ="5e8c9b467f0c80b9a4c47f15980d1849";
+const key ="5e8c9b467f0c80b9a4c47f15980d1849";
 var temperature = 0;
-var typeOfDegree = true;
+var isCelsius = true;
 const CELSUIS = '&#8451';
 const FAHRENHEIT = '&#8457';
 var endOfDegree = CELSUIS;
 
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(success, error);
+        navigator.geolocation.getCurrentPosition(geoLocationSuccess, error);
     } else {
         alert("Geolocation is not supported by this browser");
     }
 }
 
-function success(position)
+function geoLocationSuccess(position)
 {
     var URL = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&units=metric&appid=" + key;
-   $.getJSON(URL).done(worked).fail(error);
+   $.getJSON(URL).done(success).fail(error);
 }
 
-function worked(res)
+function success(res)
 {
    temperature = res.main.temp;
    var windSpeed = res.wind.speed;
@@ -43,21 +43,20 @@ function error()
 
 function convertDegrees()
 {
-  //true means degress is in Celsius
-  if(typeOfDegree)
+  if(isCelsius)
   {
     temperature = (temperature * 9/5)  + 32;
     endOfDegree = FAHRENHEIT;
-    typeOfDegree = false;
+    isCelsius = false;
   }
   else
   {
     temperature = (temperature - 32)  * (5/9);
     endOfDegree = CELSUIS;
-    typeOfDegree = true;
+    isCelsius = true;
   }
 
-  temperature = temperature.toFixed(2);
+  temperature = Math.trunc(temperature);
   document.getElementById("temp").innerHTML = temperature + endOfDegree;
 }
 
