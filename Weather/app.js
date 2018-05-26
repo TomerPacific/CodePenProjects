@@ -23,6 +23,7 @@ function geoLocationSuccess(position)
 function success(res)
 {
    temperature = res.main.temp;
+   console.log(res.wind);
    var windSpeed = res.wind.speed;
    var windDegree = res.wind.deg;
    var clouds = res.clouds.all;
@@ -32,7 +33,7 @@ function success(res)
    document.getElementById("location").innerHTML = country ? country : "Unknown Country";
    document.getElementById("description").innerHTML = description ? description : "No Description";
    document.getElementById("temp").innerHTML = temperature + '&#8451';
-   document.getElementById("wind").innerHTML = windSpeed + " At a degree of " + windDegree;
+   document.getElementById("wind").innerHTML = windSpeed ? windSpeed + " At a degree of " + windDegree : "No wind data";
    document.getElementById("weatherIcon").src = 'http://openweathermap.org/img/w/' + weatherCond + '.png';
 }
 
