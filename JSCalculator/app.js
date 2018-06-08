@@ -7,7 +7,7 @@ var screen;
 
 window.onload = function() {
      screen = document.getElementById("calcScreen");
-	screen.innerHTML = "0";
+	 screen.innerHTML = "0";
 };
 
 
@@ -80,10 +80,22 @@ function onPress(element)
 }
  
 
+
 function calc()
 {
+	if (!sawOperation) {
+		return;
+	}
+
+	if (sawOperation && visibleOnScreen.length === 0) {
+		screen.innerHTML = "ERROR!";
+		setTimeout(clearScreen, 1500);
+		return;
+	}
+
 	operationString += visibleOnScreen;
 	screen.innerHTML = eval(operationString);
+	console.log(screen.innerHTML);
 	periodPressed = false;
 	visibleOnScreen = eval(operationString).toString();
 }

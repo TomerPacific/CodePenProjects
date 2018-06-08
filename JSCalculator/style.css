@@ -3,10 +3,13 @@ body{
 }
 
 #calcOutline{
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 5%;
   height: 220px;
   width: 20%;
   margin: auto auto;
+  margin-top: 10%;
+  background-color: #003366;
 }
 
 #calcScreen{
