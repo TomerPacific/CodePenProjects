@@ -12,6 +12,8 @@ const DOWN_KEY = 40;
 
 let context;
 let canvas;
+let foodPositionX;
+let foodPositionY;
 
 let snake = [
 	{x: 150, y: 150},
@@ -91,6 +93,7 @@ function mainSnakeMovement() {
 	setTimeout(function onTick() {
 		checkBoundries();
 		clearCanvas();
+		drawFood(foodPositionX, foodPositionY);
 		advanceSnake();
 		drawWholeSnake();
 
@@ -99,8 +102,6 @@ function mainSnakeMovement() {
 }
 
 function directionalKeyPressed(event) {
-	console.log(event.keyCode);
-
 	switch(event.keyCode) {
 		case LEFT_KEY: 
 		{
@@ -135,8 +136,27 @@ function directionalKeyPressed(event) {
 	}
 }
 
+function generateFood() {
+	foodPositionX = Math.round(Math.random() * (canvas.width - 10) / 10) * 10;
+	foodPositionY = Math.round(Math.random() * (canvas.height - 10) / 10) * 10;
+
+	snake.forEach(function wasFoodGeneratedInSnakePosition(snakeChain) {
+		if (snakeChain.x === foodPositionX && snakeChain.y === foodPositionY) {
+			generateFood();
+		}
+	});
+}
+
+function drawFood(x, y) {
+	context.fillStyle = 'red';
+ 	context.strokestyle = 'darkred';
+ 	context.fillRect(x, y, 10, 10);
+ 	context.strokeRect(x, y, 10, 10);
+}
+
 /* Main Flow */
 init();
 mainSnakeMovement();
 document.addEventListener('keydown', directionalKeyPressed);
+generateFood();
 
