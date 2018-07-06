@@ -11,6 +11,9 @@ let snake = [
 	{x: 110, y: 150}
 ];
 
+let dx = 0;
+let dy = 0;
+
 
 
 function init() {
@@ -22,7 +25,9 @@ function init() {
 
 	context.fillRect(0, 0, canvas.width, canvas.height);
 	context.strokeRect(0, 0, canvas.width, canvas.height);
+}
 
+function drawWholeSnake() {
 	snake.forEach(drawSnake);
 }
 
@@ -35,5 +40,13 @@ function drawSnake(snakeChain) {
 }
 
 
+function advanceSnake() {
+	const snakeHead = {x: snake[0].x + dx, y: snake[0].y + dy};
 
+	snake.unshift(snakeHead);
+
+	snake.pop();
+}
+
+/* Main Flow */
 init();
