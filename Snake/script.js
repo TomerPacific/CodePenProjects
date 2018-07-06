@@ -25,6 +25,8 @@ function init() {
 
 	context.fillRect(0, 0, canvas.width, canvas.height);
 	context.strokeRect(0, 0, canvas.width, canvas.height);
+
+	drawWholeSnake();
 }
 
 function drawWholeSnake() {
@@ -46,6 +48,14 @@ function advanceSnake() {
 	snake.unshift(snakeHead);
 
 	snake.pop();
+}
+
+function clearCanvas() {
+	context.fillStyle = CANVAS_BACKGROUND_COLOR;
+	context.strokeStyle = CANVAS_BORDER_COLOR;
+
+	context.fillRect(0, 0, canvas.width, canvas.height);
+	context.strokeRect(0, 0, canvas.width, canvas.height);
 }
 
 /* Main Flow */
