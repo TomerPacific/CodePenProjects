@@ -14,6 +14,8 @@ let context;
 let canvas;
 let foodPositionX;
 let foodPositionY;
+let score = 0;
+let scoreElement = document.querySelector('#score');
 
 let snake = [
 	{x: 150, y: 150},
@@ -36,6 +38,7 @@ function init() {
 	context.fillRect(0, 0, canvas.width, canvas.height);
 	context.strokeRect(0, 0, canvas.width, canvas.height);
 
+	scoreElement.innerHTML = score.toString();
 	drawWholeSnake();
 }
 
@@ -51,13 +54,22 @@ function drawSnake(snakeChain) {
 	context.strokeRect(snakeChain.x, snakeChain.y, 10, 10);
 }
 
+function didSnakeEatFood(snakeHead) {
+	return snakeHead.x == foodPositionX && snakeHead.y === foodPositionY;
+}
 
 function advanceSnake() {
 	const snakeHead = {x: snake[0].x + dx, y: snake[0].y + dy};
 
 	snake.unshift(snakeHead);
 
-	snake.pop();
+	if (didSnakeEatFood(snakeHead)) {
+		score += 5;
+		scoreElement.innerHTML = score.toString();
+		generateFood();
+	} else {
+		snake.pop();
+	}
 }
 
 function resetSnake() {
