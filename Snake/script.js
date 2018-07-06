@@ -1,7 +1,17 @@
+/* Constants */
+
 const CANVAS_BORDER_COLOR = 'black';
 const CANVAS_BACKGROUND_COLOR = 'white';
+const LEFT_KEY = 37;
+const UP_KEY = 38;
+const RIGHT_KEY = 39;
+const DOWN_KEY = 40;
+
+
+/*  Main Game Global Variables */
 
 let context;
+let canvas;
 
 let snake = [
 	{x: 150, y: 150},
@@ -11,13 +21,11 @@ let snake = [
 	{x: 110, y: 150}
 ];
 
-let dx = 0;
+let dx = 10;
 let dy = 0;
 
-
-
 function init() {
-	var canvas = document.querySelector('#game');
+	canvas = document.querySelector('#game');
 	context = canvas.getContext('2d');
 
 	context.fillStyle = CANVAS_BACKGROUND_COLOR;
@@ -58,5 +66,55 @@ function clearCanvas() {
 	context.strokeRect(0, 0, canvas.width, canvas.height);
 }
 
+function mainSnakeMovement() {
+	setTimeout(function onTick() {
+		clearCanvas();
+		advanceSnake();
+		drawWholeSnake();
+
+		mainSnakeMovement();
+	}, 100);
+}
+
+function directionalKeyPressed(event) {
+	console.log(event.keyCode);
+
+	switch(event.keyCode) {
+		case LEFT_KEY: 
+		{
+			if (dx !== 10) {
+				dx = -10;
+				dy = 0;
+			}
+			break;
+		}
+		case RIGHT_KEY: 
+		{
+			if (dx !== -10) {
+				dx = 10;
+				dy = 0;
+			}
+			break;
+		}
+		case UP_KEY: 
+			if (dy !== 10) {
+				dx = 0;
+				dy = -10;
+			}
+			break;
+		case DOWN_KEY:
+		{
+			if (dy !== -10) {
+				dx = 0;
+				dy = 10;
+			}
+			break;
+		}
+	}
+}
+
 /* Main Flow */
 init();
+mainSnakeMovement();
+document.addEventListener('keydown', directionalKeyPressed);
+
