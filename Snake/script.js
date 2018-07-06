@@ -58,6 +58,19 @@ function advanceSnake() {
 	snake.pop();
 }
 
+function resetSnake() {
+	snake = [
+		{x: 150, y: 150},
+		{x: 140, y: 150},
+		{x: 130, y: 150},
+		{x: 120, y: 150},
+		{x: 110, y: 150}
+	];
+
+	let dx = 10;
+	let dy = 0;
+}
+
 function clearCanvas() {
 	context.fillStyle = CANVAS_BACKGROUND_COLOR;
 	context.strokeStyle = CANVAS_BORDER_COLOR;
@@ -66,8 +79,17 @@ function clearCanvas() {
 	context.strokeRect(0, 0, canvas.width, canvas.height);
 }
 
+function checkBoundries() {
+	if (snake[0].x + 5 >= canvas.width || snake[0].x - 5 <= 0) {
+		resetSnake();
+	} else if (snake[0].y + 5 >= canvas.height || snake[0].y - 5 <= 0) {
+		resetSnake();
+	}
+}
+
 function mainSnakeMovement() {
 	setTimeout(function onTick() {
+		checkBoundries();
 		clearCanvas();
 		advanceSnake();
 		drawWholeSnake();
