@@ -16,6 +16,7 @@ let foodPositionX;
 let foodPositionY;
 let score = 0;
 let scoreElement = document.querySelector('#score');
+let changingDirection = false;
 
 let snake = [
 	{x: 150, y: 150},
@@ -81,8 +82,11 @@ function resetSnake() {
 		{x: 110, y: 150}
 	];
 
-	let dx = 10;
-	let dy = 0;
+	dx = 10;
+	dy = 0;
+	score = 0;
+	changingDirection = false;
+	generateFood();
 }
 
 function clearCanvas() {
@@ -93,27 +97,25 @@ function clearCanvas() {
 	context.strokeRect(0, 0, canvas.width, canvas.height);
 }
 
-function checkBoundries() {
-	if (snake[0].x + 5 >= canvas.width || snake[0].x - 5 <= 0) {
-		resetSnake();
-	} else if (snake[0].y + 5 >= canvas.height || snake[0].y - 5 <= 0) {
-		resetSnake();
-	}
-}
+function didSnakeHitWall() {
+	if (snake[0].x >= canvas.width || 
+		snake[0].x <= 0 ||
+		snake[0].y + 5 >= canvas.height ||
+		snake[0].y - 5 <= 0) {
+			return true;
+	} 
 
-function mainSnakeMovement() {
-	setTimeout(function onTick() {
-		checkBoundries();
-		clearCanvas();
-		drawFood(foodPositionX, foodPositionY);
-		advanceSnake();
-		drawWholeSnake();
-
-		mainSnakeMovement();
-	}, 100);
+	return false;
 }
 
 function directionalKeyPressed(event) {
+
+	if (changingDirection) {
+		return;
+	}
+
+	changingDirection = true;
+
 	switch(event.keyCode) {
 		case LEFT_KEY: 
 		{
@@ -172,3 +174,17 @@ mainSnakeMovement();
 document.addEventListener('keydown', directionalKeyPressed);
 generateFood();
 
+function mainSnakeMovement() {
+	setTimeout(function onTick() {
+		changingDirection = false;
+		if (didSnakeHitWall()) {
+			resetSnake();
+		}
+		clearCanvas();
+		drawFood(foodPositionX, foodPositionY);
+		advanceSnake();
+		drawWholeSnake();
+
+		mainSnakeMovement();
+	}, 100);
+}
