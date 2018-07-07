@@ -55,10 +55,6 @@ function drawSnake(snakeChain) {
 	context.strokeRect(snakeChain.x, snakeChain.y, 10, 10);
 }
 
-function didSnakeEatFood(snakeHead) {
-	return snakeHead.x == foodPositionX && snakeHead.y === foodPositionY;
-}
-
 function advanceSnake() {
 	const snakeHead = {x: snake[0].x + dx, y: snake[0].y + dy};
 
@@ -85,6 +81,7 @@ function resetSnake() {
 	dx = 10;
 	dy = 0;
 	score = 0;
+	scoreElement.innerHTML = score.toString();
 	changingDirection = false;
 	generateFood();
 }
@@ -95,6 +92,17 @@ function clearCanvas() {
 
 	context.fillRect(0, 0, canvas.width, canvas.height);
 	context.strokeRect(0, 0, canvas.width, canvas.height);
+}
+
+function didSnakeHitSelf() {
+	let snakeHead = snake[0];
+	for(let i = 1; i < snake.length; i++) {
+		if (snake[i].x === snakeHead.x && snake[i].y === snakeHead.y) {
+			return true;
+		}
+	}
+
+	return false;
 }
 
 function didSnakeHitWall() {
@@ -150,6 +158,8 @@ function directionalKeyPressed(event) {
 	}
 }
 
+/* Food Related */
+
 function generateFood() {
 	foodPositionX = Math.round(Math.random() * (canvas.width - 10) / 10) * 10;
 	foodPositionY = Math.round(Math.random() * (canvas.height - 10) / 10) * 10;
@@ -168,7 +178,14 @@ function drawFood(x, y) {
  	context.strokeRect(x, y, 10, 10);
 }
 
+function didSnakeEatFood(snakeHead) {
+	return snakeHead.x == foodPositionX && snakeHead.y === foodPositionY;
+}
+
+
+
 /* Main Flow */
+
 init();
 mainSnakeMovement();
 document.addEventListener('keydown', directionalKeyPressed);
@@ -177,7 +194,7 @@ generateFood();
 function mainSnakeMovement() {
 	setTimeout(function onTick() {
 		changingDirection = false;
-		if (didSnakeHitWall()) {
+		if (didSnakeHitWall() || didSnakeHitSelf()) {
 			resetSnake();
 		}
 		clearCanvas();
