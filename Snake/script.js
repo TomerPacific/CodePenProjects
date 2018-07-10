@@ -16,7 +16,9 @@ let foodPositionX;
 let foodPositionY;
 let score = 0;
 let scoreElement = document.querySelector('#score');
+scoreElement.innerHTML = score.toString();
 let changingDirection = false;
+let hasGameStarted = false;
 
 let snake = [
 	{x: 150, y: 150},
@@ -31,6 +33,7 @@ let dy = 0;
 
 function init() {
 	canvas = document.querySelector('#game');
+	canvas.style.visibility = "visible";
 	context = canvas.getContext('2d');
 
 	context.fillStyle = CANVAS_BACKGROUND_COLOR;
@@ -182,15 +185,6 @@ function didSnakeEatFood(snakeHead) {
 	return snakeHead.x == foodPositionX && snakeHead.y === foodPositionY;
 }
 
-
-
-/* Main Flow */
-
-init();
-mainSnakeMovement();
-document.addEventListener('keydown', directionalKeyPressed);
-generateFood();
-
 function mainSnakeMovement() {
 	setTimeout(function onTick() {
 		changingDirection = false;
@@ -205,3 +199,22 @@ function mainSnakeMovement() {
 		mainSnakeMovement();
 	}, 100);
 }
+
+/* Main Flow */
+
+function startGame(mode) {
+
+	if (hasGameStarted) {
+		resetSnake();
+		return;
+	}
+
+	hasGameStarted = true;
+	init();
+	mainSnakeMovement();
+	document.addEventListener('keydown', directionalKeyPressed);
+	generateFood();
+}
+
+
+
