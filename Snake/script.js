@@ -19,6 +19,7 @@ let scoreElement = document.querySelector('#score');
 scoreElement.innerHTML = score.toString();
 let changingDirection = false;
 let hasGameStarted = false;
+let gameMode = "";
 
 let snake = [
 	{x: 150, y: 150},
@@ -59,7 +60,22 @@ function drawSnake(snakeChain) {
 }
 
 function advanceSnake() {
+	
 	const snakeHead = {x: snake[0].x + dx, y: snake[0].y + dy};
+
+	if (gameMode === 'adventure') {
+		if (snakeHead.x >= canvas.width) {
+			snakeHead.x = 0;
+		} else if (snakeHead.x <= 0) {
+			snakeHead.x = canvas.width;
+		}
+		
+		if (snakeHead.y >= canvas.height) {
+			snakeHead.y = 0;
+		} else if (snakeHead.y <= 0) {
+			snakeHead.y = canvas.height;
+		}
+	}
 
 	snake.unshift(snakeHead);
 
@@ -188,9 +204,12 @@ function didSnakeEatFood(snakeHead) {
 function mainSnakeMovement() {
 	setTimeout(function onTick() {
 		changingDirection = false;
-		if (didSnakeHitWall() || didSnakeHitSelf()) {
+		if (didSnakeHitSelf()) {
 			resetSnake();
-		}
+		} else if (gameMode !== 'adventure' && didSnakeHitWall()) {
+			resetSnake();
+		} 
+
 		clearCanvas();
 		drawFood(foodPositionX, foodPositionY);
 		advanceSnake();
@@ -203,7 +222,7 @@ function mainSnakeMovement() {
 /* Main Flow */
 
 function startGame(mode) {
-
+	gameMode = mode;
 	if (hasGameStarted) {
 		resetSnake();
 		return;
