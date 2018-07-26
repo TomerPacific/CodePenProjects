@@ -9,21 +9,29 @@ Projects Available On CodePen
 
 ## [Countdown](https://codepen.io/TomerBenRachel/pen/VWdjjP)
 
-## [Exp Site](https://codepen.io/TomerBenRachel/pen/XgpaQx)
-
 ## [Flexbox](https://codepen.io/TomerBenRachel/pen/dZewRa)
 
 ## [JSCalculator](https://codepen.io/TomerBenRachel/pen/qXWoXw)
+
+## [Navbar Animation](https://codepen.io/TomerBenRachel/pen/QgdWde)
 
 ## [Pomodoro Clock](https://codepen.io/TomerBenRachel/pen/vJOywj)
 
 ## [Portfolio](https://codepen.io/TomerBenRachel/pen/NNWgdb)
 
+## [Showcase](https://codepen.io/TomerBenRachel/pen/MEgywQ)
+
 ## [Simon](https://codepen.io/TomerBenRachel/pen/wqodNK)
+
+## [Snake](https://codepen.io/TomerBenRachel/pen/rKEXea)
 
 ## [Threadly](https://codepen.io/TomerBenRachel/pen/rwjNmM)
 
 ## [Tic Tac Toe](https://codepen.io/TomerBenRachel/pen/PKGGza)
+
+## [Todo List](https://codepen.io/TomerBenRachel/pen/VzJOYL)
+
+## [Tribute](https://codepen.io/TomerBenRachel/pen/EPJWpe)
 
 ## [Twitch TV](https://codepen.io/TomerBenRachel/pen/LLwwXj)
 
@@ -32,3 +40,5 @@ Projects Available On CodePen
 ## [Weather](https://codepen.io/TomerBenRachel/pen/OgrYxw)
 
 ## [Wikipedia Search](https://codepen.io/TomerBenRachel/pen/XgGOpG)
+
+## [Exp Site](https://codepen.io/TomerBenRachel/pen/XgpaQx)
