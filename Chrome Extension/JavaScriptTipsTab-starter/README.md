@@ -6,3 +6,5 @@
 - Syntax
 - Values that are Falsy
 - Built in functions
+
+[Go To Project in CodePen](https://codepen.io/TomerBenRachel/pen/WEgQRW)
