@@ -1,7 +1,7 @@
 # CodePenProjects
 Projects Available On CodePen
 
-## [Breakout](https://codepen.io/TomerBenRachel/pen/bRgbYM) - [Breakout - Github](https://github.com/TomerPacific/CodePenProjects/tree/master/Breakout)
+## [Breakout](https://codepen.io/TomerBenRachel/pen/bRgbYM)
 
 ## [CSS Grid](https://codepen.io/TomerBenRachel/pen/GymMdX)
 
