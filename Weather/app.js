@@ -30,10 +30,14 @@ function success(res)
    var country = res.sys.country;
    var description = res.weather[0].description;
    var weatherCond = res.weather[0].icon;
+    
+    var windSpeedMsg = windSpeed ? windSpeed : "";
+    windSpeedMsg += windDegree ? " At a degree of " + windDegree : ""; 
+    
    document.getElementById("location").innerHTML = country ? country : "Unknown Country";
    document.getElementById("description").innerHTML = description ? description : "No Description";
    document.getElementById("temp").innerHTML = temperature + '&#8451';
-   document.getElementById("wind").innerHTML = windSpeed ? windSpeed + " At a degree of " + windDegree : "No wind data";
+   document.getElementById("wind").innerHTML = windSpeedMsg;
    document.getElementById("weatherIcon").src = 'http://openweathermap.org/img/w/' + weatherCond + '.png';
 }
 
