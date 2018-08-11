@@ -7,6 +7,7 @@
     <h1 id="title">Survey Form</h1>
     
     <div id="survey">
+
       <p id="description">Please Fill In This Form</p>
       
       <form id="survey-form">
@@ -14,14 +15,17 @@
           <label for="name" id="name-label">* Name : </label>
           <input name="name" type="text" id="name" placeholder="Enter Your Name" required>
         </div>
+
         <div class="surveyField">
          <label for="email" id="email-label">* Email : </label>
         <input name="email" type="email" id="email" placeholder="Enter Your Email" required>
         </div>
+
         <div class="surveyField">
          <label for="age" id="number-label">* Age : </label>
         <input name="age" type="number" id="number" min='18' max='120' required>
         </div>
+
         <div class="surveyField">
          <label for="dropdown" id="dropdown-label"> Dropdown : </label>
         <select name="list" id="dropdown">
@@ -30,19 +34,22 @@
           <option value="3">Three</option>
         </select>
         </div>
+
         <div class="surveyField">
-        <label for="radio" id="radio-label">* Choice : </label>
-        <input type="radio" name="choice" value="A">A
-         <input type="radio" name="choice" value="B">B
-         <input type="radio" name="choice" value="C">C
+          <label for="radio" id="radio-label">* Choice : </label>
+          <input type="radio" name="choice" value="A">A
+          <input type="radio" name="choice" value="B">B
+          <input type="radio" name="choice" value="C">C
         </div>
+
         <div class="surveyField">
-        <input type="checkbox" name="choiceA" value="ChoiceA">ChoiceA
-  <input type="checkbox" name="choiceB" value="ChoiceB">ChoiceB
+          <input type="checkbox" name="choiceA" value="ChoiceA">ChoiceA
+          <input type="checkbox" name="choiceB" value="ChoiceB">ChoiceB
         </div>
         
         <textarea name="comment" form="survey-form">Enter text here...</textarea>
         <br>
+        
         <input type="submit" id="submit" onclick="validate();">
       </form>
       

@@ -7,7 +7,7 @@ var ageField = document.querySelector('#number');
 var form = document.querySelector('#survey-form');
 
 
-validateRadio = function() {
+isAnyRadioButtonChecked = function() {
 	var radioButtons = document.getElementsByName('choice');
 	var checked = false;
 
@@ -21,9 +21,8 @@ validateRadio = function() {
 }
 
 validEmail = function(email) {
-	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    
-    return re.test(String(email).toLowerCase());
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
 }
 
 validAge = function(age) {
@@ -31,31 +30,34 @@ validAge = function(age) {
 	return isValid;
 }
 
-validate = function(e) {
- 
- e.preventDefault();
-
-  var valid = true;
-
+areRequiredFieldsFilled = function() {
   if (nameField.value === '' ||
       emailField.value === '' ||
-      ageField.value === '') {
-    valid = false;
+      ageField.value === '' }}
+      !isAnyRadioButtonChecked()) {
+    return false;
   }
 
-  if (!validateRadio()) {
-  	valid = false;
+  return true;
+}
+
+validate = function(e) {
+  e.preventDefault();
+
+
+  if (!areRequiredFieldsFilled()) {
+    return false; 
   }
 
   if (!validEmail(emailField.value)) {
-  	valid = false;
+  	return false; 
   }
 
   if (!validAge(ageField.value)) {
-  	valid = false;
+  	return false; 
   }
 
-  return valid;
+  return true;
 }
 
 
