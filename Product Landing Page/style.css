@@ -1,11 +1,24 @@
 
 #header-img {
   width: 5%;
+  height: 5%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  position: fixed; 
+  top: 0;
+  width: 100%; 
 }
 
 #nav-bar a {
   padding: 10px;
-  float: right;
+  color: black;
+}
+
+#nav-bar a:hover {
+  color: cyan;
 }
 
 .nav-link {
@@ -16,4 +29,14 @@ section {
   width: 100%;
   height: 100%;
   text-align: center;
+}
+
+#first {
+  margin-top: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: purple;
+  }
 }
