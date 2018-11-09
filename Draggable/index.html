@@ -1,0 +1,27 @@
+<html>
+  
+  <head>
+    <title>Drag & Drop</title>
+    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <h1>Drag & Drop</h1>
+  
+  <body>
+    
+    <div id="dragFrom"  ondrop="drop(event)" ondragover="allowDrop(event)">
+      <p id="leftDiv">Drag Me!</p>
+      <img src="http://imgserver.secure-shopping-online.com/imageLib/microserve3/scm/businessstore/fck/image/Open%20Box.png" draggable="true" ondragstart="drag(event)" id="draggableImage">
+    </div>
+    
+    <div id="dragTo" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <p id="rightDiv">Over Here!</p>
+    </div>
+
+    <script src="script.js"></script>
+  
+  </body>
+  
+  
+</html>
