@@ -8,3 +8,7 @@
 - Built in functions
 
 [Go To Project in CodePen](https://codepen.io/TomerBenRachel/pen/WEgQRW)
+
+![JSTipsStart](https://github.com/TomerPacific/CodePenProjects/blob/master/Chrome%20Extension/JavaScriptTipsTab-starter/JSTipsStart.jpg?raw=true)
+
+![JSTips](https://github.com/TomerPacific/CodePenProjects/blob/master/Chrome%20Extension/JavaScriptTipsTab-starter/JSTips.jpg?raw=true)
