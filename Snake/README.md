@@ -8,3 +8,5 @@ Features two modes :
 - Adventure - Snake can go through the walls and come out the other side
 
 [Go To Project In CodePen](https://codepen.io/TomerBenRachel/pen/rKEXea)
+
+![Snake](https://github.com/TomerPacific/CodePenProjects/blob/master/Snake/Snake.jpg?raw=true)
