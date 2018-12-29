@@ -3,24 +3,44 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+      counter: 0
+    };
+    this.increment = this.increment.bind(this);
+     this.decrement = this.decrement.bind(this);
+     this.reset = this.reset.bind(this);
+  } //end constructor
+  
+  increment() {
+    this.setState({
+      counter: this.state.counter+1
+    });
+  }
+  
+  reset() {
+     this.setState({
+      counter: 0
+    });
+  }  
+  
+  decrement() {
+    this.setState({
+      counter: this.state.counter-1
+    });
+  }
+  
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <div>
+      <h2>{this.state.counter}</h2>
+      <button id="inc" onClick={this.increment}>+1</button>
+      <button id="dec" onClick={this.decrement}>-1</button>
+      <button id="reset" onClick={this.reset}>Reset</button>
+     </div>
     );
   }
 }
