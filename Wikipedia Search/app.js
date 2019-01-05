@@ -1,6 +1,6 @@
 function showSearchResults(){
   var data = document.getElementById("searchField").value;
-  var URL ="http://en.wikipedia.org//w/api.php?action=query&list=search&srsearch="+data+"&format=json&callback=?";
+  var URL ="https://en.wikipedia.org//w/api.php?action=query&list=search&srsearch="+data+"&format=json&callback=?";
   $.getJSON(URL).done(success).fail(error);
 }
 
@@ -36,6 +36,6 @@ function success(result)
 
 function error(err)
 {
-  console.log("Getting error when trying to use Wikipedia's API");
+  console.log("Getting error when trying to use Wikipedia's API " + err);
 }
 
