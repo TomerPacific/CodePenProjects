@@ -10,17 +10,17 @@ body {
   font-family: 'Staatliches', cursive;
 }
 
-#firstRow {
+.row {
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 5%;
+  grid-gap: 4%;
 }
 
 .article {
   border: 3px solid black;
   width: 100%;
-  height: 170px;
+  height: 150px;
 }
 
 #androidLayouts {
@@ -28,6 +28,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
 
 #visibility {
   background: url( https://github.com/TomerPacific/MediumArticles/blob/master/images/AndroidVisibility.jpg?raw=true);
@@ -43,6 +44,30 @@ body {
 
 #publishExtension {
   background: url(https://github.com/TomerPacific/MediumArticles/blob/master/images/howToPublishChromeExtension.jpg?raw=true);
+    background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#playStore {
+   background: url(https://github.com/TomerPacific/MediumArticles/blob/master/images/PlayStorePublish.jpg?raw=true);
+    background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#israelIP {
+   background: url(https://github.com/TomerPacific/MediumArticles/blob/master/images/IsraelIPProblem.jpg?raw=true);
+    background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#documentation {
+  background: url(https://github.com/TomerPacific/MediumArticles/blob/master/images/Documentation.jpg?raw=true);
+    background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#firstPR {
+  background: url(https://github.com/TomerPacific/MediumArticles/blob/master/images/FirstPR.jpg?raw=true);
     background-repeat: no-repeat;
   background-size: 100%;
 }
