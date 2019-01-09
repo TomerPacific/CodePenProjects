@@ -23,6 +23,8 @@ body {
   height: 150px;
 }
 
+li:hover { box-shadow: 0 0 5px #ff0000; }
+
 #androidLayouts {
   background: url(https://github.com/TomerPacific/MediumArticles/blob/master/images/AndroidLayouts.jpg?raw=true);
   background-repeat: no-repeat;
