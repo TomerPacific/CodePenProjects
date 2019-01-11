@@ -32,6 +32,11 @@ li:hover {
   box-shadow: 0 0 50px #FFFFFF;
 }
 
+li span {
+  display: block;
+  padding-top: 45%;
+}
+
 #androidLayouts {
   background: url(https://github.com/TomerPacific/MediumArticles/blob/master/images/AndroidLayouts.jpg?raw=true);
   background-repeat: no-repeat;
@@ -78,5 +83,23 @@ li:hover {
 #firstPR {
   background: url(https://github.com/TomerPacific/MediumArticles/blob/master/images/FirstPR.jpg?raw=true);
     background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#buildChromeExtension {
+  background: url(            https://github.com/TomerPacific/MediumArticles/blob/master/images/chromeExtensionArticle.jpg?raw=true);
+   background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#communicationBridges {
+  background: url(            https://github.com/TomerPacific/MediumArticles/blob/master/images/communicationBridgePart1.jpg?raw=true);
+   background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#developerSecondJob {
+  background: url(            https://github.com/TomerPacific/MediumArticles/blob/master/images/developerSecondJob.jpg?raw=true);
+   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
