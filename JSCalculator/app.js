@@ -6,7 +6,7 @@ var firstTime = true;
 var screen;
 
 window.onload = function() {
-     screen = document.getElementById("calcScreen");
+   screen = document.getElementById("screen");
 	 screen.innerHTML = "0";
 };
 
@@ -62,7 +62,6 @@ function onPress(element)
 			else if(firstTime || sawOperation)
 			{
 				firstTime = false;
-				sawOperation = false;
 				screen.innerHTML = element;
 				visibleOnScreen += element;
 			}
@@ -95,7 +94,6 @@ function calc()
 
 	operationString += visibleOnScreen;
 	screen.innerHTML = eval(operationString);
-	console.log(screen.innerHTML);
 	periodPressed = false;
 	visibleOnScreen = eval(operationString).toString();
 }

@@ -1,35 +1,85 @@
-body{
-  text-align:center;
-}
-
-#calcOutline{
-  border: 2px solid black;
-  border-radius: 5%;
-  height: 220px;
-  width: 20%;
-  margin: auto auto;
-  margin-top: 10%;
-  background-color: #003366;
-}
-
-#calcScreen{
+#container {
+  display: grid;
+  width: 122px;
+  height: 100%;
+  grid-template-columns : 30px 30px 30px 30px;
+  grid-template-rows: 25px 1fr 1fr 1fr 1fr;
+  grid-template-areas:"screen screen screen screen"
+                      "seven eight nine division"
+                      "four five six multiplication"
+                      "one two three subtraction"
+                      "zero decimal addition equals";
   border: 1px solid black;
-  height:25px;
-  width:50%;
-  margin-left: 30%;
-  border-radius: 5%;
-  background-color: #00ff99;
-  text-align: right;
 }
 
-#firstRow{
-  padding-top: 5%;
-  text-align: left;
-}
-ul{
-  list-style:none;
+#screen{
+ grid-area:screen;
+ border: 1px solid black;
+ border-radius: 5%;
+ background-color: #00ff99;
+ text-align: right;
 }
 
-ul li{
-  display:inline;
+#zero {
+  grid-area:zero;
+}
+
+#one {
+  grid-area:one;
+}
+
+#two {
+  grid-area:two;
+}
+
+#three {
+  grid-area:three;
+}
+
+#four {
+  grid-area:four;
+}
+
+#five {
+  grid-area:five;
+}
+
+#six {
+  grid-area:six;
+}
+
+#seven {
+  grid-area:seven;
+}
+
+#eight {
+  grid-area:eight;
+}
+
+#nine {
+  grid-area:nine;
+}
+
+#decimal {
+  grid-area:decimal;
+}
+
+#addition {
+  grid-area:addition;
+}
+
+#division {
+  grid-area:division;
+}
+
+#multiplication {
+  grid-area:multiplication;
+}
+
+#subtraction {
+  grid-area:subtraction;
+}
+
+#equals {
+  grid-area:equals;
 }
