@@ -1,4 +1,7 @@
+
 #container {
+  margin: auto auto;
+  margin-top: 1%;
   display: grid;
   width: 122px;
   height: 100%;
@@ -8,13 +11,14 @@
                       "seven eight nine division"
                       "four five six multiplication"
                       "one two three subtraction"
-                      "zero decimal addition equals";
+                      "zero decimal addition equals"
+                      "CE CE CE CE";
   border: 1px solid black;
 }
 
 #screen{
  grid-area:screen;
- border: 1px solid black;
+ border: 2px solid black;
  border-radius: 5%;
  background-color: #00ff99;
  text-align: right;
@@ -82,4 +86,8 @@
 
 #equals {
   grid-area:equals;
+}
+
+#clear {
+  grid-area: CE;
 }
