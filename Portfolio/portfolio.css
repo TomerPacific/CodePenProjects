@@ -11,10 +11,14 @@ body {
     align-items: center;
 }
 
+section {
+    height: 100vh;
+}
+
 
 #top {
 	color: white;
-	font-family: 'Anton', sans-serif;
+	font-family: 'Acme', sans-serif;
 	width: 100%;
 	background-color: #b1b1ae4d;
 }
