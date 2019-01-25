@@ -22,6 +22,21 @@ body {
     height: 100%;
 }
 
-.carousel-control-next {
+.carousel-control-next, .carousel-control-prev  {
     filter: invert(100%);
+}
+
+.carousel-caption {
+    color:black;
+    width: 20%;
+    background-color: #b1b1ae4d;
+    margin: auto auto;
+}
+
+.carousel-indicators li {
+    background-color: black;
+}
+
+.carousel-indicators .active {
+    background-color: blue;
 }
