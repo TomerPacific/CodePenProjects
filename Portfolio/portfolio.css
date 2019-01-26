@@ -49,3 +49,35 @@ body {
     width: 100%;
     hegith: 100%;
 }
+
+#socialIcons {
+    margin-top: 20%;
+}
+
+.fa-stack-overflow{
+    color:orange;
+}
+
+.fa-github, .fa-medium {
+    color:black;
+}
+
+.fa-stack-overflow:hover, .fa-github:hover, .fa-medium:hover{
+    color:white;
+     -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    padding: 2%;
+}
