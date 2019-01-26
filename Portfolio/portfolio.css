@@ -15,7 +15,6 @@ body {
 	color: white;
 	font-family: 'Crete Round', serif;
 	width: 100%;
-	background-color: #b1b1ae4d;
 }
 
 #carousel {
@@ -52,6 +51,19 @@ body {
 
 #socialIcons {
     margin-top: 10%;
+    width: 35%;
+    border-radius: 3%;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    float: left;
+    width: 100px;
+    background-color: #b1b1ae4d;
 }
 
 .fa-stack-overflow{
@@ -69,15 +81,4 @@ body {
     -moz-transition:.5s;
     -webkit-transition:.5s;
     transition:.5s;
-}
-
-
-
-ul {
-    list-style: none;
-}
-
-ul li {
-    display: inline-block;
-    padding: 2%;
 }
