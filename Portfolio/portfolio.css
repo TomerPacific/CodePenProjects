@@ -13,7 +13,7 @@ body {
 
 #top {
 	color: white;
-	font-family: 'Acme', sans-serif;
+	font-family: 'Crete Round', serif;
 	width: 100%;
 	background-color: #b1b1ae4d;
 }
@@ -51,18 +51,18 @@ body {
 }
 
 #socialIcons {
-    margin-top: 20%;
+    margin-top: 10%;
 }
 
 .fa-stack-overflow{
     color:orange;
 }
 
-.fa-github, .fa-medium {
+.fa-github, .fa-medium, .fa-codepen {
     color:black;
 }
 
-.fa-stack-overflow:hover, .fa-github:hover, .fa-medium:hover{
+.fa-stack-overflow:hover, .fa-github:hover, .fa-medium:hover, .fa-codepen:hover{
     color:white;
      -o-transition:.5s;
     -ms-transition:.5s;
