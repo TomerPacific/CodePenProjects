@@ -17,38 +17,6 @@ body {
 	width: 100%;
 }
 
-#carousel {
-    height: 100%;
-}
-
-.carousel-control-next, .carousel-control-prev  {
-    filter: invert(100%);
-}
-
-.carousel-caption {
-    color:black;
-    width: 20%;
-    background-color: #b1b1ae4d;
-    margin: auto auto;
-}
-
-.carousel-indicators li {
-    background-color: black;
-}
-
-.carousel-indicators .active {
-    background-color: blue;
-}
-
-.carousel-inner{
-    width: 100%;
-    height: 100%;
-}
-.carousel-inner img{
-    width: 100%;
-    hegith: 100%;
-}
-
 #socialIcons {
     margin-top: 10%;
     width: 35%;
@@ -81,4 +49,40 @@ ul li {
     -moz-transition:.5s;
     -webkit-transition:.5s;
     transition:.5s;
+}
+
+section {
+    height: 100vh;
+}
+
+#carousel {
+    height: 100%;
+}
+
+.carousel-control-next, .carousel-control-prev  {
+    filter: invert(100%);
+}
+
+.carousel-caption {
+    color:black;
+    width: 20%;
+    background-color: #b1b1ae4d;
+    margin: auto auto;
+}
+
+.carousel-indicators li {
+    background-color: black;
+}
+
+.carousel-indicators .active {
+    background-color: blue;
+}
+
+.carousel-inner{
+    width: 100%;
+    height: 100%;
+}
+.carousel-inner img{
+    width: 100%;
+    hegith: 100%;
 }
