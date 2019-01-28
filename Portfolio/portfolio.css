@@ -3,6 +3,11 @@ body {
     height: 100%;
 }
 
+section {
+    height: 100vh;
+}
+
+/* Social */
 #cover {
     background: url('top.jpeg') center center no-repeat;
     background-size: cover;
@@ -51,10 +56,15 @@ ul li {
     transition:.5s;
 }
 
-section {
-    height: 100vh;
+/* Projects */
+
+#projects {
+    background: url('spaceBG.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
+/* Carousel */
 #carousel {
     height: 100%;
 }
