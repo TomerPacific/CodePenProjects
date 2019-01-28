@@ -24,7 +24,7 @@ section {
 
 #socialIcons {
     margin-top: 10%;
-    width: 35%;
+    width: 45%;
     border-radius: 3%;
 }
 
@@ -39,15 +39,19 @@ ul li {
     background-color: #b1b1ae4d;
 }
 
-.fa-stack-overflow{
+.fa-stack-overflow {
     color:orange;
+}
+
+.fa-google-play {
+    color:green;
 }
 
 .fa-github, .fa-medium, .fa-codepen {
     color:black;
 }
 
-.fa-stack-overflow:hover, .fa-github:hover, .fa-medium:hover, .fa-codepen:hover{
+.fa-stack-overflow:hover, .fa-github:hover, .fa-medium:hover, .fa-codepen:hover, .fa-google-play:hover{
     color:white;
      -o-transition:.5s;
     -ms-transition:.5s;
