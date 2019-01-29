@@ -59,11 +59,8 @@ ul li {
 
 .fa-github, .fa-medium, .fa-codepen {
     color:black;
-}
 
-.fa-google-play:hover, .fa-chrome:hover {
-    text-shadow: 0px 0px 5px #FFFFFF;
-    -o-transition:.5s;
+     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
     -webkit-transition:.5s;
@@ -78,6 +75,24 @@ ul li {
     -webkit-transition:.5s;
     transition:.5s;
 }
+
+.fa-google-play:hover, .fa-chrome:hover {
+    text-shadow: 0px 0px 5px #FFFFFF;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.fa-google-play, .fa-chrome {
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
 
 /* Projects */
 
