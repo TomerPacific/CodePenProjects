@@ -120,10 +120,23 @@ iframe {
     margin-right: 2%;
   }
 
-#katzTrain {
+#flutter {
     background: url('https://github.com/TomerPacific/MediumArticles/blob/master/images/FlutterReact.jpg?raw=true');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+#playStore {
+    background: url(https://github.com/TomerPacific/MediumArticles/blob/master/images/PlayStorePublish.jpg?raw=true);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#katzTrain {
+    background: url(https://github.com/TomerPacific/KatzTrain/raw/master/KatzTrain.jpg?raw=true);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
 }
 
 /* Carousel */
