@@ -100,6 +100,30 @@ ul li {
     background: url('spaceBG.jpg') center center no-repeat;
     background-size: cover;
     height: 100%;
+    color: white;
+}
+
+iframe {
+    border: 2px solid white;
+}
+
+.row {
+    margin-bottom: 2%;
+}
+
+.other-projects {
+    width: 180px;
+    height: 265px;
+    background-color: black;
+    border: 2px solid white;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+#katzTrain {
+    background: url('https://github.com/TomerPacific/MediumArticles/blob/master/images/FlutterReact.jpg?raw=true');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 /* Carousel */
