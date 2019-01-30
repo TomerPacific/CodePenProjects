@@ -139,6 +139,15 @@ iframe {
     
 }
 
+/* Skills */
+
+#skills {
+    background: url('earthBG.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: white;
+}
+
 /* Carousel */
 #carousel {
     height: 100%;
