@@ -115,10 +115,14 @@ iframe {
     width: 180px;
     height: 265px;
     background-color: black;
-    border: 2px solid white;
+    border: 2px solid black;
     margin-left: 2%;
     margin-right: 2%;
   }
+
+.other-projects:hover {
+    border: 2px solid blue;
+}
 
 #flutter {
     background: url('https://github.com/TomerPacific/MediumArticles/blob/master/images/FlutterReact.jpg?raw=true');
