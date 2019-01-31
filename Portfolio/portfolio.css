@@ -152,6 +152,14 @@ iframe {
     color: white;
 }
 
+.card-group {
+    color:black;
+}
+
+.card {
+    background: #f2f2f2;
+}
+
 /* Carousel */
 #carousel {
     height: 100%;
