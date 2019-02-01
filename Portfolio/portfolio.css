@@ -101,6 +101,7 @@ ul li {
     background-size: cover;
     height: 100%;
     color: white;
+    overflow:hidden;
 }
 
 iframe {
@@ -150,6 +151,7 @@ iframe {
     background-size: cover;
     height: 100%;
     color: white;
+    overflow: hidden;
 }
 
 .card-group {
