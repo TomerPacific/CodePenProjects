@@ -109,3 +109,9 @@ li span {
    background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+
+#firebaseIntegration {
+  background: url(            https://github.com/TomerPacific/MediumArticles/blob/master/images/IntegratingFirebase.jpg?raw=true);
+   background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
