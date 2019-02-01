@@ -6,5 +6,5 @@ Part of the FreeCodeCamp's Basic Front End Development Projects
 
 [Go To Project In CodePen](https://codepen.io/TomerBenRachel/pen/NNWgdb)
 
-![Portfolio](https://github.com/TomerPacific/CodePenProjects/blob/master/Portfolio/Portfolio.jpg?raw=true)
+![Portfolio](https://github.com/TomerPacific/CodePenProjects/blob/620abe39e2735c2fac39d4ed75dc375cf9ddaa28/Portfolio/Portfolio.jpg?raw=true)
 
