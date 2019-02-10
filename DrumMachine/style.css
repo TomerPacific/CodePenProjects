@@ -4,14 +4,15 @@ body {
 }
 
 #drum-machine {
-	
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
 }
 
 #display {
 	display:grid;
 	grid-template-rows: 1fr 1fr 1fr;
 	grid-template-columns: 30px 30px 30px;
-	text-align: center;
 }
 
 .drum-pad {
@@ -19,7 +20,6 @@ body {
 	height: 100%;
 	background-color:gray;
 	border: 2px solid black;
-	padding:0;
 }
 
 button {
