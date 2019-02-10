@@ -9,19 +9,30 @@
 	<body>
 		 <div id="drum-machine">
 			<div id="display">
-				<div class="drum-pad"><button>Q</button></div>
-				<div class="drum-pad"><button>W</button></div>
-				<div class="drum-pad"><button>E</button></div>
-				<div class="drum-pad"><button>A</button></div>
-				<div class="drum-pad"><button>S</button></div>
-				<div class="drum-pad"><button>D</button></div>
-				<div class="drum-pad"><button>Z</button></div>
-				<div class="drum-pad"><button>X</button></div>
-				<div class="drum-pad"><button>C</button></div>
+				<div class="drum-pad"><button onclick="displayButtonInfo('Heater 1');">Q</button></div>
+				<div class="drum-pad"><button onclick="displayButtonInfo('Heater 2');">W</button></div>
+				<div class="drum-pad"><button onclick="displayButtonInfo('Heater 3');">E</button></div>
+				<div class="drum-pad"><button onclick="displayButtonInfo('Heater 4');">A</button></div>
+				<div class="drum-pad"><button onclick="displayButtonInfo('Clap');">S</button></div>
+				<div class="drum-pad"><button onclick="displayButtonInfo('Open HH');">D</button></div>
+				<div class="drum-pad"><button onclick="displayButtonInfo('Kick n\' Hat');">Z</button></div>
+				<div class="drum-pad"><button onclick="displayButtonInfo('Kick');">X</button></div>
+				<div class="drum-pad"><button onclick="displayButtonInfo('Closed HH');">C</button></div>
 			</div>
-
 		 </div>
 
+		 <div id="showInfo">
+				
+			</div>
+	<script>
+		
+		let showInfoDiv = document.getElementById("showInfo");
+
+		function displayButtonInfo(letter) {
+			showInfoDiv.innerHTML = letter;
+		}
+
+	</script>
 	</body>
 
 
