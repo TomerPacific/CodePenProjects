@@ -9,7 +9,7 @@ body {
   	align-items: center;
 }
 
-#display {
+#container {
 	display:grid;
 	grid-template-rows: 1fr 1fr 1fr;
 	grid-template-columns: 30px 30px 30px;
@@ -22,7 +22,7 @@ body {
 	border: 2px solid black;
 }
 
-#showInfo {
+#display {
 	width: 10%;
 	height: 5%;
 	background-color: cyan;

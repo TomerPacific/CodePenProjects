@@ -8,7 +8,7 @@
 
 	<body>
 		 <div id="drum-machine">
-			<div id="display">
+			<div id="container">
 				<div class="drum-pad">
 					<button onclick="displayButtonInfo('Heater 1', 'Q');">Q</button>
 					<audio class="clip" id="Q"><source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" type="audio/mp3">
@@ -66,15 +66,15 @@
 			</div>
 		 </div>
 
-		 <div id="showInfo">
+		 <div id="display">
 				
 			</div>
 	<script>
 		
-		let showInfoDiv = document.getElementById("showInfo");
+		let displayDiv = document.getElementById("display");
 
 		function displayButtonInfo(text, id) {
-			showInfoDiv.innerHTML = text;
+			displayDiv.innerHTML = text;
 			playAudio(id)
 		}
 
