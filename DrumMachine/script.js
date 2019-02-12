@@ -14,6 +14,8 @@ document.onkeypress = function (e) {
     e = e || window.event;
     let buttonToPress = String.fromCharCode(e.keyCode).toUpperCase();
     let elem = document.getElementById(buttonToPress);
-   	elem.play();
+    let children = elem.parentNode.childNodes;
+    let sibling = children.item(1);
+    displayButtonInfo(sibling.id, buttonToPress);
     
 };
