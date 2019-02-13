@@ -6,8 +6,8 @@ body {
 
 #drum-machine {
 	display: flex;
-  justify-content: center;
-  align-items: center;
+ 	 justify-content: center;
+ 	 align-items: center;
 }
 
 #container {
@@ -32,7 +32,8 @@ body {
 	margin: 2% auto;
 }
 
-button {
+a {
 	background-color: gray;
-  color: #ff9900;
+	color: #ff9900;
+	text-align: center;
 }
