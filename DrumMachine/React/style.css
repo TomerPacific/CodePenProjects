@@ -1,0 +1,21 @@
+body {
+   background: url(https://images.pexels.com/photos/1601464/pexels-photo-1601464.jpeg?cs=srgb&dl=pexels-1601464.jpg&fm=jpg);
+  background-width: 100%;
+  background-height: 100%;
+  background-repeat:no-repeat; 
+  background-size:cover;
+}
+
+#root {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.drum-pad {
+  padding: 1%;
+  color: #ff9900;
+  background-color: gray;
+  border: 1px solid white;
+  margin: 1%;
+}

@@ -1,0 +1,62 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>DrumMachine - React</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+
+	<body>
+
+		<noscript>
+      		You need to enable JavaScript to run this app.
+    	</noscript>
+
+		<div id="root">
+
+
+		</div>
+
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.1/umd/react.production.min.js" crossorigin></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.1/umd/react-dom.production.min.js" crossorigin></script>
+  	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  	<script type="text/babel">
+  		
+			class DrumMachine extends React.Component {
+				  constructor(props) {
+				    super(props);
+				    this.displayButtonInfo = this.displayButtonInfo.bind(this);
+				  }
+				  
+				  displayButtonInfo(text, id) {
+					 alert(text + " " + id);
+				  }
+				    
+				    render() {
+				      return(
+				        <div>
+				          <a className="drum-pad" onClick="">
+				            <audio id="Q" className="clip" src=""></audio>Q</a>
+				        <a className="drum-pad" onClick={(e) => this.displayButtonInfo('Heater 2','W')}>
+				            <audio id="W" className="clip" src=""></audio>W</a>
+				        <a className="drum-pad" onClick="">
+				            <audio id="E" className="clip" src=""></audio>E</a>
+				        </div>
+				        );
+				    }
+				}  
+
+		ReactDOM.render(<DrumMachine />,
+		  document.getElementById('root'));
+
+  	</script>
+	</body>
+
+
+
+</html>
