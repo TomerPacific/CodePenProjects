@@ -33,6 +33,16 @@ header {
   margin-bottom: 3%;
 }
 
+#display {
+  width: 10%;
+  height: 3%;
+  margin: auto auto;
+  background-color: cyan;
+  text-align: center;
+  border-radius: 5%;
+  border: 2px solid black;
+}
+
 #drum-container {
 
 }
