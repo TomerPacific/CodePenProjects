@@ -6,6 +6,15 @@ body {
   background-size:cover;
 }
 
+header {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 5%;
+  font-family: 'Coiny', cursive;
+  font-size: 1.5em;
+  color: #abcdef;
+}
+
 #root {
   text-align: center;
   width: 100%;
@@ -17,15 +26,13 @@ body {
   color: #ff9900;
   background-color: #000000 ;
   border: 2px solid #abcdef;
-  margin: 1%;
   border-radius: 5%;
 }
 
-header {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 5%;
-  font-family: 'Coiny', cursive;
-  font-size: 1.5em;
-  color: #abcdef;
+.btns {
+  margin-bottom: 3%;
+}
+
+#drum-container {
+
 }
