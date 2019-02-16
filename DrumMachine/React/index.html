@@ -32,14 +32,38 @@
   	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
   	<script type="text/babel">
   		
+			class KeyDisplay extends React.Component {
+				  constructor(props) {
+				    super(props);
+				   
+				  }
+				    
+				    render() {
+						return (
+						<div>
+							{this.props.text}
+						</div>
+					);
+				}
+			} // end KeyDisplay class
+
+
+
 			class DrumMachine extends React.Component {
 				  constructor(props) {
 				    super(props);
+				    this.state = {
+						clickedButtonId : -1,
+						clickedButtonText: ""
+					}
 				    this.displayButtonInfo = this.displayButtonInfo.bind(this);
 				  }
 				  
 				  displayButtonInfo(text, id) {
-					 alert(text + " " + id);
+					 this.setState((state, props) => ({
+					 	clickedButtonId: id,
+					 	clickedButtonText: text
+					}));
 				  }
 				    
 				    render() {
@@ -72,10 +96,13 @@
 				            <audio id="C" className="clip" src=""></audio>C</a>
 				        </div>
 
+				        <KeyDisplay text={this.state.clickedButtonText} />
+
 				       </div>
 				        );
 				    }
-				} //end class Drum Machine  
+				} //end class Drum Machine
+
 
 		ReactDOM.render(<DrumMachine />,
 		  document.getElementById('root'));
