@@ -18,7 +18,26 @@
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.1/umd/react-dom.production.min.js" crossorigin></script>
   	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
   	<script type="text/babel">
-		class Console extends React.Component {
+
+		class Preview extends React.Component {
+			constructor(props) {
+			 super(props);	   
+			}
+
+			render() {
+					return (
+					<div id="preview">
+						This is the preview
+					</div>
+				);
+				}
+
+
+		}
+
+
+
+		class Editor extends React.Component {
 				  constructor(props) {
 				    super(props);
 				   
@@ -27,13 +46,14 @@
 				    render() {
 						return (
 						<div>
-							<textarea id="editor" rows="4" cols="50">Hello</textarea>
+							<textarea id="editor" rows="10" cols="50">Hello</textarea>
+							<Preview />
 						</div>
 					);
 				}
-			} // end Console class
+			} // end Editor class
 
-			ReactDOM.render(<Console />,
+			ReactDOM.render(<Editor />,
 		 					 document.getElementById('root'));
 
   	</script>
