@@ -1,0 +1,45 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-color: teal;
+}
+
+#main {
+  text-align: center;
+  color: white;
+}
+
+#cta {
+  background-color: red;
+  border: 2px solid green;
+  color: white;
+}
+
+
+#modal {
+  width: 10%;
+  height: 10%;
+  background-color: orange;
+  color: white;
+  position:absolute;
+  left: -900px;
+  line-height: 2px;
+  text-align: center;
+}
+
+.slideIn {
+  transition: left 400ms linear;
+}
+
+.slideOut {
+  transition: right 1000ms linear;
+}
+
+#close {
+    float:right;
+    display:inline-block;
+}
+
+#close:hover{
+  cursor:pointer;
+}
