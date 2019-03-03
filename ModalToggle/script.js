@@ -5,13 +5,11 @@ let closeButton = document.getElementById("close");
 function toggleSlide() {
   let slideAmount;
   if (toggleSlideFlag) {
-    modal.classList.remove("slideOut");
     modal.classList.add("slideIn");
     slideAmount = 0 + "px";
   } else {
     modal.classList.remove("slideIn");
-    modal.classList.add("slideOut");
-    slideAmount = -900 + "px";
+    slideAmount = -200 + "px";
   }
   modal.style.left = slideAmount;
   toggleSlideFlag = !toggleSlideFlag;
