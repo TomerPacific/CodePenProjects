@@ -18,3 +18,4 @@ function toggleSlide() {
 closeButton.onclick = function() {
   toggleSlide();
 }
+
