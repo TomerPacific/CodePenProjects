@@ -1,0 +1,35 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+}
+
+#inputs {
+  text-align: center;
+}
+
+input[type=number] {
+  width: 3%;
+}
+
+#animationBlock {
+  width: 10%;
+  height: 20%;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  text-align: center;
+  margin: 1% auto;
+  animation-name: myanimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes myanimation {
+  0% {background-color: red;}
+  25% {background-color: green;}
+  50% {background-color: yellow;}
+  75% {background-color: blue;}
+  100% {background-color: purple;}
+}
