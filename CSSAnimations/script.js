@@ -7,8 +7,8 @@ function setInput(id) {
   } else if (id === "count") {
     animate.style.animationIterationCount = inputSource.value;
   } else if (id === "delay") {
-  	var cloned = animate.cloneNode(true);
-  	cloned.style.setProperty('animation-delay', inputSource.value + "s");
-  	animate.parentNode.replaceChild(cloned, animate);
+    var cloned = animate.cloneNode(true);
+    cloned.style.setProperty('animation-delay', inputSource.value + "s");
+    animate.parentNode.replaceChild(cloned, animate);
   }
 }

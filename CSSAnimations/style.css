@@ -10,21 +10,38 @@ body {
 
 input[type=number] {
   width: 3%;
+  border: 2px solid black;
+}
+
+label {
+  margin-left: 1%;
+  margin-right: 2px;
 }
 
 #animationBlock {
   width: 10%;
-  height: 20%;
+  height: 10%;
   background-color: black;
   border: 1px solid black;
-  color: white;
-  text-align: center;
   margin: 1% auto;
   animation-name: myanimation;
   animation-duration: 4s;
   animation-iteration-count: infinite;
 }
 
+#animationText {
+  color: white;
+  text-align: center;
+  animation: textanimation 4s infinite;
+}
+
+@keyframes textanimation {
+   0% {color: green;}
+  25% {color: yellow;}
+  50% {color: blue;}
+  75% {color: purple;}
+  100% {color: red;}
+}
 
 @keyframes myanimation {
   0% {background-color: red;}
