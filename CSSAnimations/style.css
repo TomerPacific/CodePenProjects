@@ -4,13 +4,18 @@ body {
   background-color: orange;
 }
 
-#inputs {
+#time-inputs, #keyframe-inputs {
   text-align: center;
+  margin: 1%;
 }
 
 input[type=number] {
   width: 3%;
   border: 2px solid black;
+}
+
+input[type=text] {
+  border: 2px solid white;
 }
 
 label {
@@ -33,6 +38,11 @@ label {
   color: white;
   text-align: center;
   animation: textanimation 4s infinite;
+}
+
+#keyframe-inputs p {
+  font-weight: 700;
+  color: green;
 }
 
 @keyframes textanimation {
