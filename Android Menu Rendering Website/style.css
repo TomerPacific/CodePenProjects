@@ -13,13 +13,16 @@ form {
 	margin: auto;
 }
 
-#amountOfItems {
+#amountOfItems, #items {
 	display: flex;
 	margin-top: 2%;
 	visibility: hidden;
 }
 
-#menuItems {
+#menuItems, #itemId {
 	width: 20%;
 }
+
+
+
 

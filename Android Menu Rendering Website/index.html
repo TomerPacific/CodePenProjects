@@ -13,7 +13,7 @@
     <div id="typeOfMenu">
       <form>
         <label>Type of menu:</label>
-        <select name="menus" onchange="showMenuItems()">
+        <select name="menus" id="menus" onchange="showAmountOfMenuItems()">
             <option disabled selected value> -- Select an option -- </option>
             <option value="Options">Options</option>
             <option value="Context">Context</option>
@@ -23,11 +23,17 @@
     </div>
 
    <div id="amountOfItems">
-        <form>
-          <label>Amount of menu items:</label>
-          <input type="number" id="menuItems"/>
-        </form>
-      </div>
+      <form>
+        <label>Amount of menu items:</label>
+        <input type="number" id="menuItems" min="1" max="10" oninput="validity.valid||(value='');" onchange="showMenuItems()" />
+      </form>
+   </div>
+
+   <div id="items">
+      <form id="itemForm">
+        
+      </form>
+   </div>
 
 
 
