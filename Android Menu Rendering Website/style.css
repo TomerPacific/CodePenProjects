@@ -1,12 +1,25 @@
 header {
 	text-align: center;
+	font-family: 'Oleo Script', cursive;
+	margin-bottom: 2%;
+	font-size: 1.5em;
 }
 
-#userForm {
+#typeOfMenu {
 	display: flex;
 }
 
 form {
 	margin: auto;
+}
+
+#amountOfItems {
+	display: flex;
+	margin-top: 2%;
+	visibility: hidden;
+}
+
+#menuItems {
+	width: 20%;
 }
 
