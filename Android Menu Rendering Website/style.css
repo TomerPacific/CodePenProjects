@@ -1,0 +1,12 @@
+header {
+	text-align: center;
+}
+
+#userForm {
+	display: flex;
+}
+
+form {
+	margin: auto;
+}
+
