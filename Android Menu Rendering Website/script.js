@@ -20,19 +20,19 @@ function showMenuItems() {
 		idLabel.innerHTML = 'Item ID:';
 		let idInput = document.createElement("input");
 		idInput.setAttribute('type', 'text');
-		idInput.setAttribute('id', 'itemId');
+		idInput.setAttribute('class', 'itemId');
 
 		let iconLabel = document.createElement('label');
 		iconLabel.innerHTML = 'Item Icon:';
 		let iconInput = document.createElement("input");
 		iconInput.setAttribute('type', 'text');
-		iconInput.setAttribute('id', 'itemIcon');
+		iconInput.setAttribute('class', 'itemIcon');
 
 		let titleLabel = document.createElement('label');
 		titleLabel.innerHTML = 'Item Title:';
 		let titleInput = document.createElement("input");
 		titleInput.setAttribute('type', 'text');
-		titleInput.setAttribute('id', 'itemTitle');
+		titleInput.setAttribute('class', 'itemTitle');
 
 		itemForm.appendChild(idLabel);
 		itemForm.appendChild(idInput);
@@ -47,16 +47,6 @@ function showMenuItems() {
 
 	}
 }
-
-/*
-
-<label>Item ID:</label>
-        <input type="text" id="itemId" />
-        <label>Item Icon:</label>
-        <input type="text" id="itemIcon" />
-        <label>Item Title:</label>
-        <input type="text" id="itemTitle" />
-*/
 
 
 function generateMenu() {

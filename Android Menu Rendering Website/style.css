@@ -19,8 +19,17 @@ form {
 	visibility: hidden;
 }
 
-#menuItems, #itemId {
+#menuItems {
 	width: 20%;
+}
+
+.itemId {
+	width: 10%;
+	margin-right: 5%;
+}
+
+.itemIcon {
+	margin-right: 5%;
 }
 
 
