@@ -19,6 +19,10 @@ form {
 	visibility: hidden;
 }
 
+#generateMenu, #output {
+	display: none;
+}
+
 #menuItems {
 	width: 20%;
 }
@@ -35,3 +39,9 @@ form {
 
 
 
+#output {
+	color:black;
+	width: 50%;
+	height:50%;
+	text-align: center;
+}

@@ -50,11 +50,13 @@ function showMenuItems() {
 
 
 function generateMenu() {
-	var response = `<?xml version="1.0" encoding="utf-8"?>
+	var prefix = `<?xml version="1.0" encoding="utf-8"?>
 					<menu xmlns:android="http://schemas.android.com/apk/res/android"
     					xmlns:app="http://schemas.android.com/apk/res-auto"
-    					xmlns:actionProviderClass="http://schemas.android.com/tools">`;
-    
+    					xmlns:actionProviderClass="http://schemas.android.com/tools">
+    					`;
 
-
+   let output = document.getElementById('output');
+   output.innerHTML = prefix;
 }
+
