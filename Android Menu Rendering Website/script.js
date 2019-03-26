@@ -56,7 +56,7 @@ function generateMenu() {
     					xmlns:actionProviderClass="http://schemas.android.com/tools">
     					`;
 
-   let output = document.getElementById('output');
-   output.innerHTML = prefix;
+   let xml = document.getElementById('xml');
+   xml.innerHTML = prefix;
 }
 

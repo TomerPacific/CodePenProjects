@@ -16,11 +16,12 @@ form {
 #amountOfItems, #items {
 	display: flex;
 	margin-top: 2%;
-	visibility: hidden;
+	/*visibility: hidden; */
 }
 
 #generateMenu, #output {
-	display: none;
+	/*display: none; */
+	text-align: center;
 }
 
 #menuItems {
@@ -36,12 +37,13 @@ form {
 	margin-right: 5%;
 }
 
-
-
-
 #output {
+	margin-top: 5%;
 	color:black;
-	width: 50%;
-	height:50%;
 	text-align: center;
+}
+
+#xml {
+	 resize: none;
+	 overflow: auto;
 }
