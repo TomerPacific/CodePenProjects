@@ -1,11 +1,12 @@
-let menuType;
-let amountOfMenuItems;
+let menuType = '';
+let amountOfMenuItems = 0;
 
+let menuItems = document.getElementById("amountOfItems");
+let typeOfMenu = document.getElementById("menus");
 
 
 function showAmountOfMenuItems() {
-	let menuItems = document.getElementById("amountOfItems");
-	let typeOfMenu = document.getElementById("menus");
+	
 	menuItems.style.visibility = "visible";
 	menuType =  typeOfMenu.value;
 }
@@ -50,6 +51,9 @@ function showMenuItems() {
 
 
 function generateMenu() {
+	if (menuType === '' || amountOfItems === 0) {
+		return;
+	}
 	var prefix = `<?xml version="1.0" encoding="utf-8"?>
 					<menu xmlns:android="http://schemas.android.com/apk/res/android"
     					xmlns:app="http://schemas.android.com/apk/res-auto"
