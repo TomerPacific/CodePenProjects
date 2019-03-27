@@ -21,6 +21,7 @@ form {
 
 #generateMenu, #output {
 	/*display: none; */
+	margin-top: 5%;
 	text-align: center;
 }
 
@@ -38,7 +39,6 @@ form {
 }
 
 #output {
-	margin-top: 5%;
 	color:black;
 	text-align: center;
 }
@@ -46,4 +46,8 @@ form {
 #xml {
 	 resize: none;
 	 overflow: auto;
+}
+
+#copyXML {
+	text-align: center;
 }
