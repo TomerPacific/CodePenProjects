@@ -3,6 +3,7 @@ let amountOfMenuItems = 0;
 
 let menuItems = document.getElementById("amountOfItems");
 let typeOfMenu = document.getElementById("menus");
+let xml = document.getElementById('xml');
 
 
 function showAmountOfMenuItems() {
@@ -60,7 +61,13 @@ function generateMenu() {
     					xmlns:actionProviderClass="http://schemas.android.com/tools">
     					`;
 
-   let xml = document.getElementById('xml');
    xml.innerHTML = prefix;
 }
 
+
+
+function copyText() {
+
+	xml.select();
+  	document.execCommand("copy");
+}
