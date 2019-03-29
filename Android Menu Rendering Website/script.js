@@ -4,7 +4,8 @@ let amountOfMenuItems = 0;
 let menuItems = document.getElementById("amountOfItems");
 let typeOfMenu = document.getElementById("menus");
 let xml = document.getElementById('xml');
-
+let items = document.getElementById("items");
+let itemsForm = document.getElementById("itemForm");
 
 function showAmountOfMenuItems() {
 	
@@ -13,11 +14,9 @@ function showAmountOfMenuItems() {
 }
 
 function showMenuItems() {
-	let items = document.getElementById("items");
 	items.style.visibility = 'visible';
-	let amount = document.getElementById("menuItems").value;
-	let itemsForm = document.getElementById("itemForm");
-	for(let i = 0; i < amount; i++) {
+	amountOfMenuItems = document.getElementById("menuItems").value;
+	for(let i = 0; i < amountOfMenuItems; i++) {
 		let idLabel = document.createElement('label');
 		idLabel.innerHTML = 'Item ID:';
 		let idInput = document.createElement("input");
@@ -52,7 +51,7 @@ function showMenuItems() {
 
 
 function generateMenu() {
-	if (menuType === '' || amountOfItems === 0) {
+	if (menuType === '' || amountOfMenuItems === 0) {
 		return;
 	}
 	var prefix = `<?xml version="1.0" encoding="utf-8"?>
@@ -62,6 +61,8 @@ function generateMenu() {
     					`;
 
    xml.innerHTML = prefix;
+
+
 }
 
 
