@@ -1,5 +1,6 @@
 let menuType = '';
 let amountOfMenuItems = 0;
+let uniqueIdentifier = 0;
 
 let menuItems = document.getElementById("amountOfItems");
 let typeOfMenu = document.getElementById("menus");
@@ -22,18 +23,21 @@ function showMenuItems() {
 		let idInput = document.createElement("input");
 		idInput.setAttribute('type', 'text');
 		idInput.setAttribute('class', 'itemId');
+		idInput.setAttribute('id', 'itemId_' + uniqueIdentifier);
 
 		let iconLabel = document.createElement('label');
 		iconLabel.innerHTML = 'Item Icon:';
 		let iconInput = document.createElement("input");
 		iconInput.setAttribute('type', 'text');
 		iconInput.setAttribute('class', 'itemIcon');
+		iconInput.setAttribute('id', 'itemIcon_' + uniqueIdentifier);
 
 		let titleLabel = document.createElement('label');
 		titleLabel.innerHTML = 'Item Title:';
 		let titleInput = document.createElement("input");
 		titleInput.setAttribute('type', 'text');
 		titleInput.setAttribute('class', 'itemTitle');
+		titleInput.setAttribute('id', 'itemTitle_' + uniqueIdentifier);
 
 		itemForm.appendChild(idLabel);
 		itemForm.appendChild(idInput);
@@ -45,6 +49,8 @@ function showMenuItems() {
 		itemForm.appendChild(titleInput);
 
 		itemForm.appendChild(document.createElement('br'));
+
+		uniqueIdentifier++;
 
 	}
 }
