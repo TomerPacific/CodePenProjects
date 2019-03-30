@@ -66,8 +66,22 @@ function generateMenu() {
     					xmlns:actionProviderClass="http://schemas.android.com/tools">
     					`;
 
-   xml.innerHTML = prefix;
+   
 
+   for (let i = 0; i < amountOfMenuItems; i++) {
+	   	let menuItemId = document.getElementById('itemId_' + i);
+	   	let menuItem = '<item android:id="@+id/'  + menuItemId.value + "\"";
+	   	let menuItemIcon = document.getElementById('itemIcon_' + i);
+	   	menuItem += 'android:icon="' + menuItemIcon.value + "\"" + "\n";
+	   	let menuItemTitle = document.getElementById('itemTitle_' + i);
+	   	menuItem += 'android:title="' + menuItemTitle.value + "\"" + "\n";
+	   	menuItem += '/>' + "\n";
+
+	   	prefix += menuItem;
+	   	menuItem = '';
+   }
+
+   xml.innerHTML = prefix + '</menu>';
 
 }
 
