@@ -28,7 +28,7 @@ function showMenuItems() {
 		let iconLabel = document.createElement('label');
 		iconLabel.innerHTML = 'Item Icon:';
 		let iconInput = document.createElement("input");
-		iconInput.setAttribute('type', 'text');
+		iconInput.setAttribute('type', 'file');
 		iconInput.setAttribute('class', 'itemIcon');
 		iconInput.setAttribute('id', 'itemIcon_' + uniqueIdentifier);
 
