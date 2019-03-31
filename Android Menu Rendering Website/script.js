@@ -66,20 +66,32 @@ function generateMenu() {
 		return;
 	}
 	var prefix = `<?xml version="1.0" encoding="utf-8"?>
-					<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    					xmlns:app="http://schemas.android.com/apk/res-auto"
-    					xmlns:actionProviderClass="http://schemas.android.com/tools">
-    					`;
+				<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    			xmlns:app="http://schemas.android.com/apk/res-auto"
+    			xmlns:actionProviderClass="http://schemas.android.com/tools">`;
 
    
 
    for (let i = 0; i < amountOfMenuItems; i++) {
 	   	let menuItemId = document.getElementById(ITEM_ID + '_' + i);
-	   	let menuItem = '<item android:id="@+id/'  + menuItemId.value + "\"";
+		let menuItem = '';
+
+	   	if (menuItemId.value) {
+   			menuItem = '<item android:id="@+id/'  + menuItemId.value + "\"\n ";
+	   	}
+	   
 	   	let menuItemIcon = document.getElementById(ITEM_ICON + '_' + i);
-	   	menuItem += 'android:icon="' + menuItemIcon.value + "\"" + "\n";
+
+	   	if (menuItemIcon.value) {
+   			menuItem += 'android:icon="' + menuItemIcon.value + "\"" + "\n ";
+	   	}
+
 	   	let menuItemTitle = document.getElementById(ITEM_TITLE + '_' + i);
-	   	menuItem += 'android:title="' + menuItemTitle.value + "\"" + "\n";
+
+	   	if (menuItemTitle.value) {
+		   	menuItem += 'android:title="' + menuItemTitle.value + "\"" + "\n";
+	   	}
+
 	   	menuItem += '/>' + "\n";
 
 	   	prefix += menuItem;
