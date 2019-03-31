@@ -1,3 +1,8 @@
+const ITEM_ID = "itemId";
+const ITEM_ICON = "itemIcon";
+const ITEM_TITLE = "itemTitle";
+
+
 let menuType = '';
 let amountOfMenuItems = 0;
 let uniqueIdentifier = 0;
@@ -22,22 +27,22 @@ function showMenuItems() {
 		idLabel.innerHTML = 'Item ID:';
 		let idInput = document.createElement("input");
 		idInput.setAttribute('type', 'text');
-		idInput.setAttribute('class', 'itemId');
-		idInput.setAttribute('id', 'itemId_' + uniqueIdentifier);
+		idInput.setAttribute('class', ITEM_ID);
+		idInput.setAttribute('id', ITEM_ID + '_' + uniqueIdentifier);
 
 		let iconLabel = document.createElement('label');
 		iconLabel.innerHTML = 'Item Icon:';
 		let iconInput = document.createElement("input");
 		iconInput.setAttribute('type', 'file');
-		iconInput.setAttribute('class', 'itemIcon');
-		iconInput.setAttribute('id', 'itemIcon_' + uniqueIdentifier);
+		iconInput.setAttribute('class', ITEM_ICON);
+		iconInput.setAttribute('id', ITEM_ICON + '_' + uniqueIdentifier);
 
 		let titleLabel = document.createElement('label');
 		titleLabel.innerHTML = 'Item Title:';
 		let titleInput = document.createElement("input");
 		titleInput.setAttribute('type', 'text');
-		titleInput.setAttribute('class', 'itemTitle');
-		titleInput.setAttribute('id', 'itemTitle_' + uniqueIdentifier);
+		titleInput.setAttribute('class', ITEM_TITLE);
+		titleInput.setAttribute('id', ITEM_TITLE + '_' + uniqueIdentifier);
 
 		itemForm.appendChild(idLabel);
 		itemForm.appendChild(idInput);
@@ -69,11 +74,11 @@ function generateMenu() {
    
 
    for (let i = 0; i < amountOfMenuItems; i++) {
-	   	let menuItemId = document.getElementById('itemId_' + i);
+	   	let menuItemId = document.getElementById(ITEM_ID + '_' + i);
 	   	let menuItem = '<item android:id="@+id/'  + menuItemId.value + "\"";
-	   	let menuItemIcon = document.getElementById('itemIcon_' + i);
+	   	let menuItemIcon = document.getElementById(ITEM_ICON + '_' + i);
 	   	menuItem += 'android:icon="' + menuItemIcon.value + "\"" + "\n";
-	   	let menuItemTitle = document.getElementById('itemTitle_' + i);
+	   	let menuItemTitle = document.getElementById(ITEM_TITLE + '_' + i);
 	   	menuItem += 'android:title="' + menuItemTitle.value + "\"" + "\n";
 	   	menuItem += '/>' + "\n";
 
