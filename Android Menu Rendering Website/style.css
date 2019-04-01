@@ -1,9 +1,18 @@
+* {
+	background-color: #4056A1;
+	color: #EFE2BA;
+}
+
 header {
 	text-align: center;
 	font-family: 'Oleo Script', cursive;
 	margin-bottom: 2%;
 	font-size: 1.5em;
 }
+
+ button, input, select, option {
+ 	background-color: #D4A69A;
+ }
 
 #typeOfMenu {
 	display: flex;
