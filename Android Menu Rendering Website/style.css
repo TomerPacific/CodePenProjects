@@ -57,6 +57,10 @@ form {
 	 overflow: auto;
 }
 
+#xml::placeholder {
+	color: #EFE2BA ;
+}
+
 #copyXML {
 	text-align: center;
 }
