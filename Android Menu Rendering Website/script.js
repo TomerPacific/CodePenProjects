@@ -1,11 +1,13 @@
 const ITEM_ID = "itemId";
 const ITEM_ICON = "itemIcon";
 const ITEM_TITLE = "itemTitle";
+const SHOW_AS_ACTION = "itemShowAsAction";
 
 
 let menuType = '';
 let amountOfMenuItems = 0;
 let uniqueIdentifier = 0;
+let optionsMenuFlag = false;
 
 let menuItems = document.getElementById("amountOfItems");
 let typeOfMenu = document.getElementById("menus");
@@ -17,9 +19,15 @@ function showAmountOfMenuItems() {
 	
 	menuItems.style.visibility = "visible";
 	menuType =  typeOfMenu.value;
+	optionsMenuFlag = menuType === "Options";
 }
 
 function showMenuItems() {
+
+	let showAsActionLabel;
+	let showAsActionInput;
+
+
 	items.style.visibility = 'visible';
 	amountOfMenuItems = document.getElementById("menuItems").value;
 	for(let i = 0; i < amountOfMenuItems; i++) {
@@ -44,6 +52,17 @@ function showMenuItems() {
 		titleInput.setAttribute('class', ITEM_TITLE);
 		titleInput.setAttribute('id', ITEM_TITLE + '_' + uniqueIdentifier);
 
+
+		//Add android:showAsAction attribute
+		if (optionsMenuFlag) {
+			showAsActionLabel = document.createElement('label');
+			showAsActionLabel.innerHTML = "Show As Action";
+			showAsActionInput = document.createElement("input");
+			showAsActionInput.setAttribute('type', 'text');
+			showAsActionInput.setAttribute('class', SHOW_AS_ACTION);
+			showAsActionInput.setAttribute('id', SHOW_AS_ACTION + '_' + uniqueIdentifier);
+		}
+
 		itemForm.appendChild(idLabel);
 		itemForm.appendChild(idInput);
 
@@ -52,6 +71,11 @@ function showMenuItems() {
 
 		itemForm.appendChild(titleLabel);
 		itemForm.appendChild(titleInput);
+
+		if (optionsMenuFlag) {
+			itemForm.appendChild(showAsActionLabel);
+			itemForm.appendChild(showAsActionInput);
+		}
 
 		itemForm.appendChild(document.createElement('br'));
 
