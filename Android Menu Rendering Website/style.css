@@ -59,6 +59,7 @@ form {
 
 #xml::placeholder {
 	color: #EFE2BA ;
+	white-space: pre;
 }
 
 #copyXML {

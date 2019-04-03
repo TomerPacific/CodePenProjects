@@ -67,8 +67,8 @@ function generateMenu() {
 	}
 	var prefix = `<?xml version="1.0" encoding="utf-8"?>
 				<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    			xmlns:app="http://schemas.android.com/apk/res-auto"
-    			xmlns:actionProviderClass="http://schemas.android.com/tools">`;
+    			      xmlns:app="http://schemas.android.com/apk/res-auto"
+    			      xmlns:actionProviderClass="http://schemas.android.com/tools">\n`;
 
    
 
@@ -77,28 +77,28 @@ function generateMenu() {
 		let menuItem = '';
 
 	   	if (menuItemId.value) {
-   			menuItem = '<item android:id="@+id/'  + menuItemId.value + "\"\n ";
+   			menuItem = '\t \t \t \t <item android:id="@+id/'  + menuItemId.value + "\"\n ";
 	   	}
 	   
 	   	let menuItemIcon = document.getElementById(ITEM_ICON + '_' + i);
 
 	   	if (menuItemIcon.value) {
-   			menuItem += 'android:icon="' + menuItemIcon.value + "\"" + "\n ";
+   			menuItem += '\t \t \t \t android:icon="' + menuItemIcon.value + "\"" + "\n ";
 	   	}
 
 	   	let menuItemTitle = document.getElementById(ITEM_TITLE + '_' + i);
 
 	   	if (menuItemTitle.value) {
-		   	menuItem += 'android:title="' + menuItemTitle.value + "\"" + "\n";
+		   	menuItem += '\t \t \t \t android:title="' + menuItemTitle.value + "\"" + "\n";
 	   	}
 
-	   	menuItem += '/>' + "\n";
+	   	menuItem += '\t \t \t \t />' + "\n";
 
 	   	prefix += menuItem;
 	   	menuItem = '';
    }
 
-   xml.innerHTML = prefix + '</menu>';
+   xml.innerHTML = prefix + ' \t \t \t \t </menu>';
 
 }
 
