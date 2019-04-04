@@ -28,11 +28,15 @@ main {
   top: 20%;
   width: 20%;
   height: 20%;
-}
-
-input{
   border: none;
-  font-size: 1em;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none; /*remove the resize handle on the bottom right*/
+   font-size: 1em;
   font-family: 'Fredericka the Great',
     cursive;
   color: #1a1a1a;
