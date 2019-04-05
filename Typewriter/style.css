@@ -6,10 +6,10 @@ header {
 body {
   width: 100%;
   height: 100%;
-   background-image: url(https://zdnet3.cbsistatic.com/hub/i/r/2014/10/03/0396b043-4b1e-11e4-b6a0-d4ae52e95e57/resize/770xauto/f9d090fa24cef3418d609f14b6ef5686/2012-02-09manual-typewriter-0209stock.jpg);
-background-repeat:no-repeat;
-background-size:stretch;
-background-position:center;
+  background-image: url(https://zdnet3.cbsistatic.com/hub/i/r/2014/10/03/0396b043-4b1e-11e4-b6a0-d4ae52e95e57/resize/770xauto/f9d090fa24cef3418d609f14b6ef5686/2012-02-09manual-typewriter-0209stock.jpg);
+  background-repeat:no-repeat;
+  background-size:stretch;
+  background-position:center;
 }
 
 main {
@@ -24,10 +24,10 @@ main {
 
 #userInput {
   position: absolute;
-  left: 40%;
-  top: 20%;
-  width: 20%;
-  height: 20%;
+  left: 575px;
+  top: 140px;
+  width: 222px;
+  height: 130px;
   border: none;
   overflow: auto;
   outline: none;
