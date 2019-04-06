@@ -3,6 +3,8 @@ const ITEM_ICON = "itemIcon";
 const ITEM_TITLE = "itemTitle";
 const SHOW_AS_ACTION = "itemShowAsAction";
 
+const SHOW_AS_VALUES = ['always', 'never', 'ifRoom', 'withText', 'collapseActionView'];
+
 
 let menuType = '';
 let amountOfMenuItems = 0;
@@ -57,10 +59,32 @@ function showMenuItems() {
 		if (optionsMenuFlag) {
 			showAsActionLabel = document.createElement('label');
 			showAsActionLabel.innerHTML = "Show As Action";
-			showAsActionInput = document.createElement("input");
-			showAsActionInput.setAttribute('type', 'text');
-			showAsActionInput.setAttribute('class', SHOW_AS_ACTION);
-			showAsActionInput.setAttribute('id', SHOW_AS_ACTION + '_' + uniqueIdentifier);
+			showAsActionSelect = document.createElement('select');
+			showAsActionSelect.setAttribute('name', 'showAsActionSelect');
+			
+			let showAsActionOption = document.createElement('option');
+			showAsActionOption.disabled = true;
+			showAsActionOption.value = '';
+			showAsActionOption.innerHTML = '-- Select an option --';
+			showAsActionOption.selected = true;
+			showAsActionSelect.appendChild(showAsActionOption);
+
+			for (let i = 0; i < SHOW_AS_VALUES.length; i++) {
+				
+				showAsActionOption = document.createElement('option');
+				showAsActionOption.value = SHOW_AS_VALUES[i];
+				showAsActionOption.innerHTML = SHOW_AS_VALUES[i];
+
+				showAsActionSelect.appendChild(showAsActionOption);
+			}
+
+
+			
+
+			
+			// showAsActionInput.setAttribute('type', 'text');
+			// showAsActionInput.setAttribute('class', SHOW_AS_ACTION);
+			// showAsActionInput.setAttribute('id', SHOW_AS_ACTION + '_' + uniqueIdentifier);
 		}
 
 		itemForm.appendChild(idLabel);
@@ -74,7 +98,7 @@ function showMenuItems() {
 
 		if (optionsMenuFlag) {
 			itemForm.appendChild(showAsActionLabel);
-			itemForm.appendChild(showAsActionInput);
+			itemForm.appendChild(showAsActionSelect);
 		}
 
 		itemForm.appendChild(document.createElement('br'));
