@@ -116,6 +116,11 @@ function generateMenu() {
 		   	menuItem += '\t \t \t \t android:title="' + menuItemTitle.value + "\"" + "\n";
 	   	}
 
+	   	if (optionsMenuFlag) {
+		   	let menuItemShowAs = document.getElementById(SHOW_AS_ACTION + '_' + i);
+		   	menuItem += '\t \t \t \t android:showAsAction="' + menuItemShowAs.value + "\"" + "\n";
+	   	}
+
 	   	menuItem += '\t \t \t \t />' + "\n";
 
 	   	prefix += menuItem;
