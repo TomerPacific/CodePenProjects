@@ -38,6 +38,16 @@ form {
 	width: 20%;
 }
 
+#itemsForm {
+	display: flex;
+ 	 flex-direction: row;
+}
+
+.formItem {
+	display: block;
+	margin: 2%;
+}
+
 .itemId {
 	width: 10%;
 	margin-right: 5%;

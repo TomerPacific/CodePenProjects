@@ -28,6 +28,7 @@ function showAmountOfMenuItems() {
 function showMenuItems() {
 
 	let showAsActionLabel;
+	let wrapperShowAsActionDiv;
 
 	items.style.visibility = 'visible';
 	amountOfMenuItems = document.getElementById("menuItems").value;
@@ -39,6 +40,11 @@ function showMenuItems() {
 		idInput.setAttribute('class', ITEM_ID);
 		idInput.setAttribute('id', ITEM_ID + '_' + uniqueIdentifier);
 
+		let wrapperIDDiv = document.createElement('div');
+		wrapperIDDiv.setAttribute('class', 'formItem');
+		wrapperIDDiv.appendChild(idLabel);
+		wrapperIDDiv.appendChild(idInput);
+
 		let iconLabel = document.createElement('label');
 		iconLabel.innerHTML = 'Item Icon:';
 		let iconInput = document.createElement("input");
@@ -46,12 +52,22 @@ function showMenuItems() {
 		iconInput.setAttribute('class', ITEM_ICON);
 		iconInput.setAttribute('id', ITEM_ICON + '_' + uniqueIdentifier);
 
+		let wrapperIconDiv = document.createElement('div');
+		wrapperIconDiv.setAttribute('class', 'formItem');
+		wrapperIconDiv.appendChild(iconLabel);
+		wrapperIconDiv.appendChild(iconInput);
+
 		let titleLabel = document.createElement('label');
 		titleLabel.innerHTML = 'Item Title:';
 		let titleInput = document.createElement("input");
 		titleInput.setAttribute('type', 'text');
 		titleInput.setAttribute('class', ITEM_TITLE);
 		titleInput.setAttribute('id', ITEM_TITLE + '_' + uniqueIdentifier);
+
+		let wrapperTitleDiv = document.createElement('div');
+		wrapperTitleDiv.setAttribute('class', 'formItem');
+		wrapperTitleDiv.appendChild(titleLabel);
+		wrapperTitleDiv.appendChild(titleInput);
 
 
 		//Add android:showAsAction attribute
@@ -76,20 +92,20 @@ function showMenuItems() {
 
 				showAsActionSelect.appendChild(showAsActionOption);
 			}
+
+			wrapperShowAsActionDiv = document.createElement('div');
+			wrapperShowAsActionDiv.setAttribute('class', 'formItem');
+			wrapperShowAsActionDiv.appendChild(showAsActionLabel);
+			wrapperShowAsActionDiv.appendChild(showAsActionSelect);
 		}
 
-		itemForm.appendChild(idLabel);
-		itemForm.appendChild(idInput);
+		itemForm.appendChild(wrapperIDDiv);
+		itemForm.appendChild(wrapperIconDiv);
+		itemForm.appendChild(wrapperTitleDiv);
 
-		itemForm.appendChild(iconLabel);
-		itemForm.appendChild(iconInput);
-
-		itemForm.appendChild(titleLabel);
-		itemForm.appendChild(titleInput);
 
 		if (optionsMenuFlag) {
-			itemForm.appendChild(showAsActionLabel);
-			itemForm.appendChild(showAsActionSelect);
+			itemForm.appendChild(wrapperShowAsActionDiv);
 		}
 
 		itemForm.appendChild(document.createElement('br'));
