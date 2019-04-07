@@ -16,6 +16,7 @@ let typeOfMenu = document.getElementById("menus");
 let xml = document.getElementById('xml');
 let items = document.getElementById("items");
 let itemsForm = document.getElementById("itemForm");
+let showAsActionSelect;
 
 function showAmountOfMenuItems() {
 	
@@ -27,8 +28,6 @@ function showAmountOfMenuItems() {
 function showMenuItems() {
 
 	let showAsActionLabel;
-	let showAsActionInput;
-
 
 	items.style.visibility = 'visible';
 	amountOfMenuItems = document.getElementById("menuItems").value;
@@ -77,14 +76,6 @@ function showMenuItems() {
 
 				showAsActionSelect.appendChild(showAsActionOption);
 			}
-
-
-			
-
-			
-			// showAsActionInput.setAttribute('type', 'text');
-			// showAsActionInput.setAttribute('class', SHOW_AS_ACTION);
-			// showAsActionInput.setAttribute('id', SHOW_AS_ACTION + '_' + uniqueIdentifier);
 		}
 
 		itemForm.appendChild(idLabel);
@@ -141,8 +132,7 @@ function generateMenu() {
 	   	}
 
 	   	if (optionsMenuFlag) {
-		   	let menuItemShowAs = document.getElementById(SHOW_AS_ACTION + '_' + i);
-		   	menuItem += '\t \t \t \t android:showAsAction="' + menuItemShowAs.value + "\"" + "\n";
+		   	menuItem += '\t \t \t \t android:showAsAction="' + showAsActionSelect.value + "\"" + "\n";
 	   	}
 
 	   	menuItem += '\t \t \t \t />' + "\n";
