@@ -3,51 +3,70 @@
   <head>
     <title>Android Menus</title>
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="data:image/x-icon;," type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+    <div class="container mainContainer">
     <header>
-      Android Menu XML Generator
+        Android Menu XML Generator
     </header>
-    
-    <div id="typeOfMenu">
-      <form>
-        <label>Type of menu:</label>
-        <select name="menus" id="menus" onchange="showAmountOfMenuItems()">
-            <option disabled selected value> -- Select an option -- </option>
-            <option value="Options">Options</option>
-            <option value="Context">Context</option>
-            <option value="Popup">Popup</option>
-          </select>
-      </form>
+    <div class="row">
+        <div class="col">
+            <div id="typeOfMenu">
+                <form>
+                    <label for="menus">Type of menu:</label>
+                    <select name="menus" id="menus" onchange="showAmountOfMenuItems()" class="form-control">
+                        <option disabled selected value> -- Select an option --</option>
+                        <option value="Options">Options</option>
+                        <option value="Context">Context</option>
+                        <option value="Popup">Popup</option>
+                    </select>
+                </form>
+            </div>
+
+            <div id="amountOfItems">
+                <form>
+                    <label for="menuItems">Amount of menu items:</label>
+                    <input class="form-control" type="number" id="menuItems" min="1" max="10" oninput="validity.valid||(value='');"
+                           onchange="showMenuItems()"/>
+                </form>
+            </div>
+
+            <div id="items">
+                <form id="itemForm">
+
+                </form>
+            </div>
+
+
+            <div id="generateMenu">
+                <button class="btn btn-outline-primary" id="generateMenuBtn" onclick="generateMenu();">Generate Menu</button>
+            </div>
+        </div>
+        <div class="col">
+            <div id="output">
+                <textarea class="form-control" id="xml" placeholder="Layout XML Will Be Rendered Here" cols="40" rows="8"></textarea>
+            </div>
+
+            <div id="copyXML">
+                <button class="btn btn-outline-primary" id="copyBtn" onclick="copyText();">Copy</button>
+            </div>
+        </div>
     </div>
 
-   <div id="amountOfItems">
-      <form>
-        <label>Amount of menu items:</label>
-        <input type="number" id="menuItems" min="1" max="10" oninput="validity.valid||(value='');" onchange="showMenuItems()" />
-      </form>
-   </div>
-
-   <div id="items">
-      <form id="itemForm">
-          
-      </form>
-   </div>
 
 
-  <div id="generateMenu">
-    <button id="generateMenuBtn" onclick="generateMenu();">Generate Menu</button>
-  </div>
-  <div id="output">
-   <textarea id="xml" placeholder="Layout XML Will Be Rendered Here" cols="40" rows="4"></textarea> 
-  </div>
+</div>
 
-  <div id="copyXML">
-    <button id="copyBtn" onclick="copyText();">Copy</button>
-  </div>
- 
 
-    <script src="script.js"></script>
-  </body>
+
+<script src="script.js"></script>
+</body>
 </html>
