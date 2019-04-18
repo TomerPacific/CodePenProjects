@@ -1,0 +1,7 @@
+{
+  "name": "Android Menu Renderer",
+  "short_name": "Android Menu",
+  "icons": [],
+  "start_url": "/index.html",
+  "display": "standalone"
+}
