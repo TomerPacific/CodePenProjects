@@ -40,3 +40,16 @@ button, input, select, option {
 .form-control {
     font-size: 13px;
 }
+
+#explanation {
+    list-style-position: inside;
+    font-size: 1.5em;
+    font-family: 'Carter One', cursive;
+    border: 2px solid #444750;
+    width: 40%;
+    margin:4% auto;
+}
+
+#generate_menu{
+    color: #24bfb9;
+}
