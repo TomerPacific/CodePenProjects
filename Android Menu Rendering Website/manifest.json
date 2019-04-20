@@ -1,7 +1,11 @@
 {
   "name": "Android Menu Renderer",
   "short_name": "Android Menu",
-  "icons": [],
+  "icons": [{
+      "src" : "android.ico",
+      "sizes": "512x512",
+      "type": "icon"
+    }],
   "start_url": "/index.html",
   "display": "standalone"
 }
