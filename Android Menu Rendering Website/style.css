@@ -41,13 +41,26 @@ button, input, select, option {
     font-size: 13px;
 }
 
+.formItem {
+    margin-top: 1%;
+}
+
+.formItem input {
+    margin-left: 1%;
+}
+
+#instructions {
+    font-family: 'Carter One', cursive;
+    margin-top: 4%;
+    border: 2px solid #444750;
+    width: 40%;
+}
+
 #explanation {
     list-style-position: inside;
     font-size: 1.5em;
     font-family: 'Carter One', cursive;
-    border: 2px solid #444750;
-    width: 40%;
-    margin:4% auto;
+    margin-top:2%;
 }
 
 #generate_menu{
