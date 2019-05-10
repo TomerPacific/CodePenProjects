@@ -26,7 +26,7 @@
 					</ul>
 
 					<div v-for="variant in variants" v-bind:key="variant.variantId">
-						<p v-on:mouseover="changeImage(variant.variantImage)"> {{variant.variantColor}}</p>
+						<p v-on:mouseover="changeImage(variant.variantImage)" v-bind:id="variant.variantColor">{{variant.variantColor}}</p>
 					</div>
 
 					<button v-on:click="addToCart">Add to Cart </button>

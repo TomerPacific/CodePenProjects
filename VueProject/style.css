@@ -30,3 +30,18 @@ button {
 	color: #E57373;
 	font-family: 'Playfair Display', serif;
 }
+
+
+#blue {
+	background: #1976D2;
+	width: 7%;
+	height: 2%;
+	color: white;
+}
+
+#green {
+	background: #388E3C;
+	width: 9%;
+	height: 2%;
+	color: white;
+}
