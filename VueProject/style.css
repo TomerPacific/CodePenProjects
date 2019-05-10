@@ -1,0 +1,32 @@
+* {
+	background: #69F0AE;
+	color: #78909C;
+}
+
+button {
+	background: #2196F3;
+	color: white;
+	width: 20%;
+	height: 6%;
+}
+
+.product {
+	align: center;
+}
+.product-image {
+	display: inline-block;
+}
+
+.product-image img {
+	width: 50%;
+	height: 50%;
+}
+
+.product-info {
+	display: inline-block;
+}
+
+.on-sale {
+	color: #E57373;
+	font-family: 'Playfair Display', serif;
+}
