@@ -22,7 +22,7 @@ var app = new Vue({
 				variantImage: "./assets/socks-gray.png"
 			}
 		],
-		cart: 0,
+		cart: 0
 	},
 	methods: {
 		addToCart: function() {

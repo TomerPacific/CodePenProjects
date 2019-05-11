@@ -34,7 +34,7 @@
 
 					<button v-on:click="addToCart" 
 					v-bind:disabled="inventory == 0"
-					v-bind:class="{ disabled-button: invetory == 0 }">Add to Cart </button>
+					v-bind:class="{ 'disabled-button': inventory == 0 }">Add to Cart </button>
 
 					<div class="cart">
 						<p>Cart({{cart}})</p>
