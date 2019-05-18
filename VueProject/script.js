@@ -35,6 +35,10 @@ Vue.component('product', {
 					v-bind:disabled="this.variants[this.selectedVariant].variantQuantity == 0"
 					v-bind:class="{ 'disabled-button': this.variants[this.selectedVariant].variantQuantity == 0 }">Add to Cart </button>
 
+					<button v-on:click="removeFromCart" 
+					v-bind:disabled="this.variants[this.selectedVariant].variantQuantity == 0"
+					v-bind:class="{ 'disabled-button': this.variants[this.selectedVariant].variantQuantity == 0 }">Remove from Cart </button>
+
 				</div>
 
 			</div>
@@ -68,6 +72,9 @@ Vue.component('product', {
 		methods: {
 			addToCart: function() {
 				this.$emit('add-to-cart', this.variants[this.selectedVariant].variantId)
+			},
+			removeFromCart: function() {
+				this.$emit('remove-from-cart', this.variants[this.selectedVariant].variantId)
 			},
 			changeImage: function(index) {
 				this.selectedVariant = index;
@@ -126,6 +133,11 @@ var app = new Vue({
 	methods: {
 		updateCart(id) {
 			this.cart.push(id)
+		},
+		removeFromCart(id) {
+			if (this.cart.indexOf(id) !== -1) {
+				this.cart.splice(this.cart.indexOf(id),1)
+			}
 		}
 	}
 })
