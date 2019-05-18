@@ -9,40 +9,7 @@
 	<body>
 		
 		<div id="app">
-			<div class="product">
-				<div class="product-image">
-					<img v-bind:src="this.variants[this.selectedVariant].variantImage" v-bind:alt="altText">
-				</div>
-
-				<div class="product-info">
-					<h1>{{ title }} </h1>
-					<h2>{{description}} </h2>
-					<p v-if="this.variants[this.selectedVariant].variantQuantity > 10">In Stock</p>
-					<p v-else-if="this.variants[this.selectedVariant].variantQuantity > 0 && this.variants[this.selectedVariant].variantQuantity <= 10">Almost sold out!</p>
-					<p v-else>Out of Stock</p>
-					<span class="on-sale">On Sale!</span>
-					<ul>
-						<li v-for="detail in details">{{ detail }}</li>
-					</ul>
-
-					<div v-for="(variant, index) in variants" 
-					v-bind:key="variant.variantId"
-					class="color-box"
-					v-bind:style="{backgroundColor: variant.variantColor}"
-					@mouseover="changeImage(index)">
-					</div>
-
-					<button v-on:click="addToCart" 
-					v-bind:disabled="this.variants[this.selectedVariant].variantQuantity == 0"
-					v-bind:class="{ 'disabled-button': this.variants[this.selectedVariant].variantQuantity == 0 }">Add to Cart </button>
-
-					<div class="cart">
-						<p>Cart({{cart}})</p>
-					</div>
-				</div>
-
-			</div>
-			
+			<product></product>
 		</div>
 
 
