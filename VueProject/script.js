@@ -35,9 +35,6 @@ Vue.component('product', {
 					v-bind:disabled="this.variants[this.selectedVariant].variantQuantity == 0"
 					v-bind:class="{ 'disabled-button': this.variants[this.selectedVariant].variantQuantity == 0 }">Add to Cart </button>
 
-					<div class="cart">
-						<p>Cart({{cart}})</p>
-					</div>
 				</div>
 
 			</div>
@@ -65,13 +62,12 @@ Vue.component('product', {
 						variantQuantity: 0,
 						onSale: false
 					}
-				],
-				cart: 0,
+				]
 				}
 			},
 		methods: {
 			addToCart: function() {
-				this.cart += 1
+				this.$emit('add-to-cart', this.variants[this.selectedVariant].variantId)
 			},
 			changeImage: function(index) {
 				this.selectedVariant = index;
@@ -124,6 +120,12 @@ Vue.component('product-details', {
 var app = new Vue({
 	el: '#app', //Connects to the div with the id app
 	data: {
-		premium: false
+		premium: false,
+		cart: []
+	},
+	methods: {
+		updateCart(id) {
+			this.cart.push(id)
+		}
 	}
 })
