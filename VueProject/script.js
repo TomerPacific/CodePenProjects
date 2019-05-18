@@ -1,4 +1,11 @@
 Vue.component('product', {
+	props: {
+		premium: {
+			type: Boolean,
+			required: true,
+			default: false
+		}
+	},
 	template: `
 		<div class="product">
 				<div class="product-image">
@@ -11,7 +18,8 @@ Vue.component('product', {
 					<p v-if="this.variants[this.selectedVariant].variantQuantity > 10">In Stock</p>
 					<p v-else-if="this.variants[this.selectedVariant].variantQuantity > 0 && this.variants[this.selectedVariant].variantQuantity <= 10">Almost sold out!</p>
 					<p v-else>Out of Stock</p>
-					
+					<p>Shipping: {{ shipping }} </p>
+
 					<ul>
 						<li v-for="detail in details">{{ detail }}</li>
 					</ul>
@@ -63,28 +71,35 @@ Vue.component('product', {
 				cart: 0,
 				}
 			},
-			methods: {
-				addToCart: function() {
-					this.cart += 1
-				},
-				changeImage: function(index) {
-					this.selectedVariant = index;
-				}
+		methods: {
+			addToCart: function() {
+				this.cart += 1
 			},
-			computed: {
-				title() {
-					return this.brand + ' ' + this.product
-				},
-				image() {
-					let img = this.variants[this.selectedVariant].variantImage
-				},
-				inStock() {
-					return this.variants[this.selectedVariant].variantQuantity
-				},
-				onSale() {
-					return this.variants[this.selectedVariant].onSale ? this.product + " " + this.brand : "";
-				}
+			changeImage: function(index) {
+				this.selectedVariant = index;
 			}
+		},
+		computed: {
+			title() {
+				return this.brand + ' ' + this.product
+			},
+			image() {
+				let img = this.variants[this.selectedVariant].variantImage
+			},
+			inStock() {
+				return this.variants[this.selectedVariant].variantQuantity
+			},
+			onSale() {
+				return this.variants[this.selectedVariant].onSale ? this.product + " " + this.brand : "";
+			},
+			shipping() {
+				if (this.premium) {
+					return "Free"
+				}
+
+				return 2.99
+			}
+		}
 		
 		})
 
@@ -92,5 +107,7 @@ Vue.component('product', {
 
 var app = new Vue({
 	el: '#app', //Connects to the div with the id app
-	
+	data: {
+		premium: false
+	}
 })
