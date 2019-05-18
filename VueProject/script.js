@@ -20,9 +20,7 @@ Vue.component('product', {
 					<p v-else>Out of Stock</p>
 					<p>Shipping: {{ shipping }} </p>
 
-					<ul>
-						<li v-for="detail in details">{{ detail }}</li>
-					</ul>
+					<product-details :details="details"></product-details>
 
 					<div v-for="(variant, index) in variants" 
 					v-bind:key="variant.variantId"
@@ -51,7 +49,7 @@ Vue.component('product', {
 				description: "A pair of warm, fuzzy socks",
 				selectedVariant: 0,
 				altText: "A pair of socks",
-				details: ["80% cotton", "20% polyester"],
+				 details: ["80% cotton", "20% polyester"],
 				variants: [
 					{
 						variantId: 2234,
@@ -101,7 +99,25 @@ Vue.component('product', {
 			}
 		}
 		
-		})
+})
+
+Vue.component('product-details', {
+	props: {
+		details: {
+			type: Array,
+			required: true
+		}
+	},
+	template: `<ul>
+					<li v-for="detail in details">{{ detail }}</li>
+				</ul>`,
+	data() {
+		return {
+
+		}
+	}
+
+})
 
 
 
