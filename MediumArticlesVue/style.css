@@ -1,3 +1,7 @@
 * {
 	text-align: center;
 }
+
+.articles {
+	list-style: none;
+}

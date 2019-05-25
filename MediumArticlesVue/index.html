@@ -8,6 +8,11 @@
 		
 		<div id="app">
 			<h1>{{ title }} </h1>
+			<ul class="articles">
+				<li v-for="article in articles" v-bind:class="article.name">
+					<a v-bind:href="article.link" target="_blank">{{article.name}}</a>
+				</li>
+			</ul>
 		</div>
 
 
