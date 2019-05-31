@@ -9,8 +9,12 @@
 		<div id="app">
 			<h1>{{ title }} </h1>
 			<ul class="articles">
-				<li v-for="article in articles" v-bind:class="article.name">
-					<medium-article :name="article.name" :publish_date="article.publish_date"></medium-article>
+				<li v-for="article in articles" v-bind:class="article.class">
+					<medium-article :name="article.name"
+					 :publish_date="article.publish_date"
+					 :url="article.link">
+					 	
+					 </medium-article>
 				</li>
 			</ul>
 		</div>

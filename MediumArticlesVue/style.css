@@ -5,3 +5,15 @@
 .articles {
 	list-style: none;
 }
+
+.android_layouts {
+	background: url(https://github.com/TomerPacific/MediumArticles/blob/master/images/AndroidLayouts.jpg?raw=true);
+	background-repeat: no-repeat;
+  	background-size: 100% 100%;
+}
+
+.android_view_visibility {
+	background: url(https://github.com/TomerPacific/MediumArticles/blob/master/images/AndroidVisibility.jpg?raw=true);
+	background-repeat: no-repeat;
+  	background-size: 100% 100%;
+}
