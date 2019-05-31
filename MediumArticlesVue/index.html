@@ -10,14 +10,14 @@
 			<h1>{{ title }} </h1>
 			<ul class="articles">
 				<li v-for="article in articles" v-bind:class="article.name">
-					<a v-bind:href="article.link" target="_blank">{{article.name}}</a>
+					<medium-article :name="article.name" :publish_date="article.publish_date"></medium-article>
 				</li>
 			</ul>
 		</div>
 
 
 
-		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="vue.js"></script>
 		<script src="script.js"></script>
 	</body>
 

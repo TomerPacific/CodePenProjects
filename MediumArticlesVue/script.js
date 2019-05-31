@@ -1,3 +1,26 @@
+Vue.component('medium-article', {
+	props: {
+		name: {
+			type: String,
+			required: true
+		},
+		publish_date: {
+			type: String,
+			required: true
+		}
+	},
+	template: `<a href="#" target="_blank">{{ name }}</a>`,
+	data() {
+		return {
+			article_name: this.name
+		}
+	},
+	computed: {
+		
+	}
+})
+
+
 var app = new Vue({
 	el: '#app', //Connects to the div with the id app
 	data: {
