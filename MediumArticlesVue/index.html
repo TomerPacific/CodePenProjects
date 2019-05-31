@@ -8,7 +8,7 @@
 	<body>
 		
 		<div id="app">
-			<h1>{{ title }} </h1>
+			<h1> {{ title }} </h1>
 			<ul class="articles">
 				<li v-for="article in articles" v-bind:class="article.class" :style="{backgroundImage: 'url(' + article.background_image + ')', 
 					 backgroundRepeat: `no-repeat`,
