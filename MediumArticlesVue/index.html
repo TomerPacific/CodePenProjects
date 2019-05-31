@@ -11,9 +11,10 @@
 		<div id="app">
 			<h1> {{ title }} </h1>
 			<ul class="articles">
-				<li v-for="article in articles" v-bind:class="article.class" :style="{backgroundImage: 'url(' + article.background_image + ')', 
+				<li v-for="(article, i) in articles" v-bind:class="article.class" :style="{backgroundImage: 'url(' + article.background_image + ')', 
 					 backgroundRepeat: `no-repeat`,
-					 backgroundSize: `100% 100%`}">
+					 backgroundSize: `100% 100%`}"
+					 v-on:click="goToArticle(article)">
 					<medium-article :name="article.name"
 					 :publish_date="article.publish_date"
 					 :url="article.link">

@@ -49,6 +49,8 @@ var app = new Vue({
 		]
 	},
 	methods: {
-		
+		goToArticle: function(article) {
+			window.open(article.link, '_blank');
+		}
 	}
 })
