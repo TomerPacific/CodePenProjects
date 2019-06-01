@@ -55,6 +55,30 @@ var app = new Vue({
 				link: 'https://medium.freecodecamp.org/how-to-publish-your-chrome-extension-dd8400a3d53',
 				publish_date: 'July 2018',
 				background_image: 'https://github.com/TomerPacific/MediumArticles/blob/master/images/howToPublishChromeExtension.jpg?raw=true'
+			},
+			{
+				name: 'How To Publish An App In The Play Store',
+				link: 'https://medium.freecodecamp.org/how-to-publish-an-application-in-the-play-store-8ddcc6dc3587',
+				publish_date: 'July 2018',
+				background_image: 'https://github.com/TomerPacific/MediumArticles/blob/master/images/PlayStorePublish.jpg?raw=true'
+			},
+			{
+				name: 'Israel\'s IP Problem',
+				link: 'https://hackernoon.com/israels-ip-problem-7d8916cb93ec',
+				publish_date: 'July 2018',
+				background_image: 'https://github.com/TomerPacific/MediumArticles/blob/master/images/IsraelIPProblem.jpg?raw=true'
+			},
+			{
+				name: 'Why Documentation Is Important',
+				link: 'https://medium.freecodecamp.org/why-documentation-matters-and-why-you-should-include-it-in-your-code-41ef62dd5c2f',
+				publish_date: 'July 2018',
+				background_image: 'https://github.com/TomerPacific/MediumArticles/blob/master/images/Documentation.jpg?raw=true'
+			},
+			{
+				name: 'Contributing To An Open Source Project',
+				link: 'https://medium.com/@tomerpacific/how-to-contribute-to-an-open-source-repository-d66b5e99eec5',
+				publish_date: 'July 2018',
+				background_image: 'https://github.com/TomerPacific/MediumArticles/blob/master/images/FirstPR.jpg?raw=true'
 			}
 		]
 	},
