@@ -1,9 +1,14 @@
 
 Vue.component('filter-btn', {
-	template: `<button class="filter_btn"><i class="fa fa-filter"></i></button>`,
+	template: `<button v-on:click="showFilteringOptions" class="filter_btn"><i class="fa fa-filter"></i></button>`,
 	data() {
 		return {
 
+		}
+	},
+	methods: {
+		showFilteringOptions: function(event) {
+			
 		}
 	}
 })
