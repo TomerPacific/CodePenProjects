@@ -1,6 +1,12 @@
-
 Vue.component('filter-btn', {
-	template: `<button v-on:click="showFilteringOptions" class="filter_btn"><i class="fa fa-filter"></i></button>`,
+	template: `<div class="dropdown">
+					<button v-on:click="showFilteringOptions" class="filter_btn"><i class="fa fa-filter"></i></button>
+					<div id="myDropdown" class="dropdown-content">
+				    	<a href="#">Link 1</a>
+				    	<a href="#">Link 2</a>
+				    	<a href="#">Link 3</a>
+			    	</div>
+			    </div>`,
 	data() {
 		return {
 
@@ -8,7 +14,7 @@ Vue.component('filter-btn', {
 	},
 	methods: {
 		showFilteringOptions: function(event) {
-			
+  			document.getElementById("myDropdown").classList.toggle("show");
 		}
 	}
 })
