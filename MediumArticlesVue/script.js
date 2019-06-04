@@ -1,3 +1,14 @@
+
+Vue.component('filter-btn', {
+	template: `<button class="filter_btn"><i class="fa fa-filter"></i></button>`,
+	data() {
+		return {
+
+		}
+	}
+})
+
+
 Vue.component('medium-article', {
 	props: {
 		name: {

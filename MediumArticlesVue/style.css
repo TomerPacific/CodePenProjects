@@ -4,12 +4,9 @@ body {
 	background-color: #c1946a;
 }
 
-#app {
-  	display: grid;
-}
-
 #app h1 {
 	color: #405d27;
+	display: inline-block;
 }
 
 .articles {
@@ -34,4 +31,10 @@ body {
 
 .articles li:hover {
 	 box-shadow: 0 0 50px #FFFFFF;
+}
+
+.filter_btn {
+	float: right;
+	background-color: #405d27;
+	color: #c1946a;
 }

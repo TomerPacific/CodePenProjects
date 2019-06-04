@@ -2,6 +2,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Medium Articles Viewer Using Vue.js</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Ranga&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="style.css">
 	</head>
@@ -9,7 +10,7 @@
 	<body>
 		
 		<div id="app">
-			<h1> {{ title }} </h1>
+			<h1> {{ title }} </h1><filter-btn></filter-btn>
 			<ul class="articles">
 				<li v-for="(article, i) in articles" v-bind:class="article.class" :style="{backgroundImage: 'url(' + article.background_image + ')', 
 					 backgroundRepeat: `no-repeat`,
