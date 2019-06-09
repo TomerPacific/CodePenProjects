@@ -101,7 +101,55 @@ var app = new Vue({
 				link: 'https://medium.com/@tomerpacific/how-to-contribute-to-an-open-source-repository-d66b5e99eec5',
 				publish_date: 'July 2018',
 				background_image: 'https://github.com/TomerPacific/MediumArticles/blob/master/images/FirstPR.jpg?raw=true'
-			}
+			},
+			{
+				name: 'How To Build A Chrome Extension',
+				link: 'https://medium.freecodecamp.org/how-to-implement-a-chrome-extension-3802d63b5376',
+				publish_date: '?????',
+				background_image: 'https://github.com/TomerPacific/MediumArticles/blob/master/images/chromeExtensionArticle.jpg?raw=true'
+			},
+			{
+				name: 'Native Cross Origin Communication Bridges',
+				link: 'https://medium.freecodecamp.org/how-to-build-cross-origin-communication-bridges-in-ios-and-andriod-7baef82b3f02',
+				publish_date: '????????/',
+				background_image: 'https://github.com/TomerPacific/MediumArticles/blob/master/images/communicationBridgePart1.jpg?raw=true'
+			},
+			{
+				name: 'Looking For A Second Job As A Developer',
+				link: 'https://medium.freecodecamp.org/what-a-developer-goes-through-when-looking-for-a-second-job-f061c26ffd8f',
+				publish_date: '????????/',
+				background_image: 'https://github.com/TomerPacific/MediumArticles/blob/master/images/developerSecondJob.jpg?raw=true'
+			},
+			{
+				name: 'Flutter > React Native',
+				link: 'https://hackernoon.com/flutter-react-native-b5e82a2c3e82',
+				publish_date: '????????/',
+				background_image: 'https://github.com/TomerPacific/MediumArticles/blob/master/images/FlutterReact.jpg?raw=true'
+			},
+			{
+				name: 'Integrate Firebase With Your Application',
+				link: 'https://medium.freecodecamp.org/how-to-integrate-firebase-with-your-application-74fdde01dfe2',
+				publish_date: '????????/',
+				background_image: 'https://github.com/TomerPacific/MediumArticles/blob/master/images/IntegratingFirebase.jpg?raw=true'
+			},
+			{
+				name: 'Why Friendships Are Dead',
+				link: 'https://hackernoon.com/why-friendships-are-dead-4db6f27962da',
+				publish_date: '????????/',
+				background_image: 'https://github.com/TomerPacific/MediumArticles/blob/master/images/Friendships.jpg?raw=true'
+			},
+			{
+				name: 'What I Learned From Publishing Stories On Medium',
+				link: 'https://medium.freecodecamp.org/what-ive-learned-from-publishing-stories-on-medium-9057da232465',
+				publish_date: '????????/',
+				background_image: 'https://github.com/TomerPacific/MediumArticles/raw/master/images/PublishingMedium.jpg?raw=true'
+			},
+			{
+				name: 'How To Properly Give A Code Review',
+				link: 'https://medium.freecodecamp.org/how-to-properly-give-a-code-review-c2fcc49e345f',
+				publish_date: '????????/',
+				background_image: 'https://github.com/TomerPacific/MediumArticles/blob/master/images/CodeReview.jpg?raw=true'
+			},
 		]
 	},
 	methods: {
