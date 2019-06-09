@@ -19,14 +19,25 @@ Vue.component('filter-btn', {
 	}
 })
 
+Vue.component('date-published', {
+	props: {
+		date: {
+			type: String,
+			required: true
+		}
+	},
+	template: `<p>Published On : {{ date }} </p>`,
+	data() {
+		return {
+
+		}
+	}
+})
+
 
 Vue.component('medium-article', {
 	props: {
 		name: {
-			type: String,
-			required: true
-		},
-		publish_date: {
 			type: String,
 			required: true
 		},

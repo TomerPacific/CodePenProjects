@@ -62,3 +62,10 @@ body {
 }
 
 .show {display:block;}
+
+.publish_date {
+  position: relative;
+  top: 100;
+  background-color: #e6e2d3;
+  color: #3e4444;
+}

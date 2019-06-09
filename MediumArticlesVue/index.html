@@ -17,10 +17,10 @@
 					 backgroundSize: `100% 100%`}"
 					 v-on:click="goToArticle(article)">
 					<medium-article :name="article.name"
-					 :publish_date="article.publish_date"
 					 :url="article.link">
-					 	
 					 </medium-article>
+					 <date-published :date="article.publish_date" class="publish_date">
+					 </date-published>
 				</li>
 			</ul>
 		</div>
