@@ -1,0 +1,36 @@
+#app {
+  margin: auto auto;
+  margin-top: 2%;
+  border: 2px dashed black;
+  width: 20%;
+  text-align: center;
+  font-family: 'Major Mono Display', monospace;
+}
+
+button {
+  margin-right: 4%;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 5px 1px;
+}
+
+button:active {
+  box-shadow: 5px 1px #666;
+  transform: translateX(2px);
+}
+
+#counter {
+  font-size: 2em;
+}
+
+#inc {
+  background-color: #00ff00;
+}
+
+#dec {
+  background-color: #ff0000;
+}
+
+#reset {
+  background-color: #0066ff;
+}
