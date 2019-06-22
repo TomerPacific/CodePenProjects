@@ -4,26 +4,29 @@ var toSlider = document.getElementById("to");
 var toOutput = document.getElementById("to-slider-output");
 
 var animateBtn = document.getElementById("animate");
+var element = document.getElementById("value");
+element.innerHTML = fromSlider.value;
 
+function setup() {
+  fromOutput.innerHTML = fromSlider.value; 
+  toOutput.innerHTML = toSlider.value; 
 
-fromOutput.innerHTML = fromSlider.value; 
-toOutput.innerHTML = toSlider.value; 
+  fromSlider.oninput = function() {
+    fromOutput.innerHTML = this.value;
+    element.innerHTML = this.value;
 
-fromSlider.oninput = function() {
-  fromOutput.innerHTML = this.value;
+  }
+
+  toSlider.oninput = function() {
+    toOutput.innerHTML = this.value;
+  }
 }
 
-toSlider.oninput = function() {
-  toOutput.innerHTML = this.value;
-}
-
-
-function animateValue(id, start, end, duration) {
+function animateValue(start, end, duration) {
     var range = end - start;
     var current = start;
     var increment = end > start ? 1 : -1;
     var stepTime = Math.abs(Math.floor(duration / range));
-    var element = document.getElementById(id);
     var timer = setInterval(function() {
         current += increment;
         element.innerHTML = current;
@@ -37,6 +40,7 @@ function animateValue(id, start, end, duration) {
 
 function startAnimation() {
   animateBtn.innerHTML = "Animate";
-  animateValue("value", parseInt(fromOutput.innerHTML), parseInt(toOutput.innerHTML), 2500);
+  animateValue(parseInt(fromOutput.innerHTML), parseInt(toOutput.innerHTML), 2500);
 }
 
+setup();

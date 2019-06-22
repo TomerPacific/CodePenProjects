@@ -1,21 +1,18 @@
-<html>
-	<head>
-	  <link href="https://fonts.googleapis.com/css?family=Ewert&display=swap" rel="stylesheet">
-	  <link rel="stylesheet" href="style.css">
-	</head>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Ewert&display=swap" rel="stylesheet">
+</head>
 
-	<body>
-		<div id="sliders">
-		  <label>From :</label>
-		  <input type="range" min="1" max="100" value="50" class="slider" id="from"><p id="from-slider-output"></p>
-		  <label>To :</label>
-		  <input type="range" min="1" max="100" value="50" class="slider" id="to"><p id="to-slider-output"></p>
-		</div>
-		<div>
-		  <button id="animate" onclick="startAnimation()">Animate</button>
-		</div>
+<div id="sliders">
+  <label>From :</label>
+  <input type="range" min="1" max="100" value="50" class="slider" id="from"><p id="from-slider-output"></p>
+  <label>To :</label>
+  <input type="range" min="1" max="100" value="50" class="slider" id="to"><p id="to-slider-output"></p>
+</div>
+<div>
+  
+  <button id="animate" onclick="startAnimation()">Animate</button>
+  
+  <div id="value"></div>
+</div>
 
-		<div id="value"></div>
-		<script src="script.js"></script>
-	</body>
-</html>
+

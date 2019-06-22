@@ -6,6 +6,13 @@
   font-size: 50px;
   font-family: 'Ewert', cursive;
 }
+
+#sliders {
+  float: left;
+  border: 2px solid black;
+  padding: 2%
+}
+
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
