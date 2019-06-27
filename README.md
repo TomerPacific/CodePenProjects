@@ -19,6 +19,8 @@ Projects Available On CodePen
 
 ## [JSCalculator](https://codepen.io/TomerBenRachel/pen/qXWoXw)
 
+## [JS Numberr Animation](https://codepen.io/TomerBenRachel/pen/GbWGva)
+
 ## [Medium Articles Viewer](https://codepen.io/TomerBenRachel/pen/NeMRmG)
 
 ## [Modal Toggle](https://codepen.io/TomerBenRachel/pen/OqNpzM)
@@ -50,6 +52,8 @@ Projects Available On CodePen
 ## [Twitch TV](https://codepen.io/TomerBenRachel/pen/LLwwXj)
 
 ## [Video Player](https://codepen.io/TomerBenRachel/pen/BZpoLv)
+
+## [Vue Counter](https://codepen.io/TomerBenRachel/pen/pXgppK)
 
 ## [Vue Project](https://codepen.io/TomerBenRachel/pen/JqXOVb)
 
