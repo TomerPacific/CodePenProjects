@@ -3,18 +3,15 @@ header {
   margin-bottom : 2%;
 }
 
-body {
-  width: 100%;
+main {
+  display: flex;
+  justify-content:center;
+   width: 100%;
   height: 100%;
   background-image: url(https://zdnet3.cbsistatic.com/hub/i/r/2014/10/03/0396b043-4b1e-11e4-b6a0-d4ae52e95e57/resize/770xauto/f9d090fa24cef3418d609f14b6ef5686/2012-02-09manual-typewriter-0209stock.jpg);
   background-repeat:no-repeat;
   background-size:stretch;
   background-position:center;
-}
-
-main {
-  display: flex;
-  justify-content:center;
 }
 
 #mainInput {
@@ -24,8 +21,8 @@ main {
 
 #userInput {
   position: absolute;
-  left: 575px;
-  top: 140px;
+  left: 660px;
+  top: 180px;
   width: 222px;
   height: 130px;
   border: none;
