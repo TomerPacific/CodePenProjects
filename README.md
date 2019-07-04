@@ -51,6 +51,8 @@ Projects Available On CodePen
 
 ## [Twitch TV](https://codepen.io/TomerBenRachel/pen/LLwwXj)
 
+## [Typewriter](https://codepen.io/TomerBenRachel/pen/bZOxmN)
+
 ## [Video Player](https://codepen.io/TomerBenRachel/pen/BZpoLv)
 
 ## [Vue Counter](https://codepen.io/TomerBenRachel/pen/pXgppK)
