@@ -24,10 +24,12 @@ function setup() {
 
 function animateValue(start, end, duration) {
   
-  if (!start || !end) {
-    return;
-  }
     var range = end - start;
+
+    if (range === 0) {
+      return;
+    }
+
     var current = start;
     var increment = end > start ? 1 : -1;
     var stepTime = Math.abs(Math.floor(duration / range));
