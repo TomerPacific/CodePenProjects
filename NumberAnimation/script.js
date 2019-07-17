@@ -23,6 +23,10 @@ function setup() {
 }
 
 function animateValue(start, end, duration) {
+  
+  if (!start || !end) {
+    return;
+  }
     var range = end - start;
     var current = start;
     var increment = end > start ? 1 : -1;
