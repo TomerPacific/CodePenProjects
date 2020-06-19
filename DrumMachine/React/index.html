@@ -64,6 +64,12 @@
 				    handleKeyDown(e){
 						let buttonToPress = e.key.toUpperCase();
 						let elem = document.getElementById(buttonToPress);
+
+						elem.parentNode.classList.add("highlighted");
+			            setTimeout(function() {
+			              elem.parentNode.classList.remove("highlighted");
+			            }, 200);
+
 						this.displayButtonInfo(elem.parentNode.id, buttonToPress);
 				  }
 				  
